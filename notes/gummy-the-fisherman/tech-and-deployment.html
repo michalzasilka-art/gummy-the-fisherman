@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#d97757"><title>Tech and Deployment · Gummy the Fisherman notes · Fugio</title><link rel="icon" href="/favicon.ico"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/notes/notes.css?v=1"></head><body><div class="top"><a class="b" href="/notes/">← Game Notes</a><b>Gummy the Fisherman</b></div><div class="layout"><nav aria-label="Notes"><a href="./">Overview</a><a href="./how-to-play.html">How to Play</a><a href="./game-mechanics.html">Game Mechanics</a><a href="./modes-and-settings.html">Modes and Settings</a><a href="./question-packages.html">Question Packages</a><a href="./fish-index.html">Fish Index</a><a href="./characters.html">Characters</a><a href="./versions.html">Versions</a><a href="./assets.html">Assets</a><a href="./tech-and-deployment.html" class=on>Tech and Deployment</a><a href="./ideas-and-to-do.html">Ideas and To-do</a><a href="./testing-history.html">Testing History</a></nav><main><h1 id="gummy-tech-and-deployment">Gummy - Tech and Deployment</h1>
+<p>Back to <a href="./">Gummy the Fisherman</a> · Files: <a href="./assets.html">Assets</a></p>
+<h2 id="addresses">Addresses</h2>
+<ul>
+<li>Production: <code>https://www.fugio.co/fish/</code>. This is a rewrite to <code>/gummy-fisherman-copy/</code>, and the old <code>/gummy-fisherman-copy</code> address forwards to <code>/fish/</code>.</li>
+<li>Test: <code>https://gummy-fisherman.fugio.co/</code> (handled by <code>middleware.js</code>). The old <code>fugio.co/gummy-fisherman/…</code> forwards there.</li>
+<li>Phone: <code>https://www.fugio.co/gummy-fisherman-mobile/</code>. <code>index.html</code> shows the game in a phone frame on big screens, and <code>play.html</code> is the game itself.</li>
+<li>Downloads: <code>fugio.co/downloads/gummy-the-fisherman-copy.zip</code> (Production v2), <code>gummy-the-fisherman.zip</code> (Test v1), <code>gummy-the-fisherman-mobile.zip</code> (Phone v11), all updated 2026-10-12.</li>
+</ul>
+<h2 id="code">Code</h2>
+<p>Each version is <strong>one big hand-written HTML file</strong>, with no build step:
+- Production: <code>fugio-site/gummy-fisherman-copy/index.html</code> (~310 KB) + <code>packages.js</code> (question packages)
+- Test: <code>fugio-site/gummy-fisherman/index.html</code>
+- Phone: <code>fugio-site/gummy-fisherman-mobile/play.html</code></p>
+<h2 id="question-packages">Question packages</h2>
+<p>A package builder script (<code>build-packages.js</code>) turns Foxino gap-fill content (JSON) into <code>packages.js</code>:</p>
+<pre><code class="language-bash">node build-packages.js &lt;content.json&gt; &lt;output&gt;/packages.js
+</code></pre>
+<p>A dialogue with several gaps becomes one question per gap. Never edit <code>packages.js</code> by hand; rebuild it.</p>
+<h2 id="libraries">Libraries</h2>
+<ul>
+<li>jsPDF 2.5.1 (Review answers PDF)</li>
+<li>PeerJS 1.5.4 (Phone mode)</li>
+<li>qrcode-generator 1.4.4</li>
+<li>jsQR 1.4.0</li>
+</ul>
+<h2 id="deploying">Deploying</h2>
+<p>fugio.co is hosted on <strong>Vercel</strong>.</p><div class="pager"><a href="./assets.html">← Assets</a><a href="./ideas-and-to-do.html">Ideas and To-do →</a></div></main></div></body></html>

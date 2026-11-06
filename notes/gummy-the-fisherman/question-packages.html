@@ -1,0 +1,1034 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#d97757"><title>Question Packages · Gummy the Fisherman notes · Fugio</title><link rel="icon" href="/favicon.ico"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/notes/notes.css?v=1"></head><body><div class="top"><a class="b" href="/notes/">← Game Notes</a><b>Gummy the Fisherman</b></div><div class="layout"><nav aria-label="Notes"><a href="./">Overview</a><a href="./how-to-play.html">How to Play</a><a href="./game-mechanics.html">Game Mechanics</a><a href="./modes-and-settings.html">Modes and Settings</a><a href="./question-packages.html" class=on>Question Packages</a><a href="./fish-index.html">Fish Index</a><a href="./characters.html">Characters</a><a href="./versions.html">Versions</a><a href="./assets.html">Assets</a><a href="./tech-and-deployment.html">Tech and Deployment</a><a href="./ideas-and-to-do.html">Ideas and To-do</a><a href="./testing-history.html">Testing History</a></nav><main><h1 id="gummy-question-packages">Gummy - Question Packages</h1>
+<p>Back to <a href="./">Gummy the Fisherman</a> · Rules: <a href="./how-to-play.html">How to Play</a></p>
+<p>Before every game the players pick one <strong>package</strong> in the lobby. Each package is one grammar topic from Foxino content (CEFR level A0–A2). The game mode is <strong>Right word into the sentence</strong>: the sentence has a gap, and the player picks the word that fits from the right answer plus up to 2 wrong ones. A hint in brackets, like <code>(sleep)</code>, shows the base word.</p>
+<p>The questions are split over the 3 rounds, but every game mixes all of a package's questions over the rounds again. The live game has <strong>962 questions</strong> in 5 packages.</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Package</th>
+<th>Questions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A0</td>
+<td>Articles (a – an)</td>
+<td>160</td>
+</tr>
+<tr>
+<td>A1</td>
+<td>Comparative adjectives (-er forms – irregular forms)</td>
+<td>172</td>
+</tr>
+<tr>
+<td>A1</td>
+<td>Present simple (questions – short answers)</td>
+<td>310</td>
+</tr>
+<tr>
+<td>A2</td>
+<td>Past continuous (positive)</td>
+<td>160</td>
+</tr>
+<tr>
+<td>A2</td>
+<td>Connecting words (because – so)</td>
+<td>160</td>
+</tr>
+</tbody>
+</table>
+<p>How packages are made: Foxino gap-fill content (JSON) → <code>content/build-packages.js</code> → <code>gummy-fisherman-copy/packages.js</code> (see <a href="./tech-and-deployment.html">Tech and Deployment</a>).</p>
+<p>In the lists below, the right answer is <strong>bold</strong> and the wrong choices are ~~struck through~~.</p>
+<h2 id="a0-articles-a-an">A0 · Articles (a – an)</h2>
+<blockquote>
+<p>[!example]- Round 1 (53 questions)
+- It's <strong>a</strong> ~~an~~ toy.
+- It's <strong>a</strong> ~~an~~ bag.
+- It's <strong>an</strong> ~~a~~ egg.
+- It's <strong>a</strong> ~~an~~ nut.
+- It's <strong>a</strong> ~~an~~ pen.
+- It's <strong>a</strong> ~~an~~ cup.
+- It's <strong>a</strong> ~~an~~ book.
+- It's <strong>a</strong> ~~an~~ lamp.
+- It's <strong>a</strong> ~~an~~ kiwi.
+- It's <strong>a</strong> ~~an~~ cake.
+- It's <strong>a</strong> ~~an~~ wall.
+- It's <strong>a</strong> ~~an~~ tree.
+- It's <strong>a</strong> ~~an~~ desk.
+- It's <strong>a</strong> ~~an~~ pear.
+- It's <strong>a</strong> ~~an~~ door.
+- It is <strong>a</strong> ~~an~~ dog.
+- It's <strong>a</strong> ~~an~~ chair.
+- It's <strong>a</strong> ~~an~~ mango.
+- It's <strong>a</strong> ~~an~~ grape.
+- It's <strong>a</strong> ~~an~~ phone.
+- It's <strong>a</strong> ~~an~~ board.
+- It's <strong>a</strong> ~~an~~ ruler.
+- It's <strong>a</strong> ~~an~~ jelly.
+- It's <strong>a</strong> ~~an~~ table.
+- It's <strong>a</strong> ~~an~~ lemon.
+- It's <strong>an</strong> ~~a~~ onion.
+- It's <strong>a</strong> ~~an~~ clock.
+- It's <strong>a</strong> ~~an~~ fruit.
+- It's <strong>a</strong> ~~an~~ pizza.
+- It's <strong>a</strong> ~~an~~ donut.
+- It's <strong>a</strong> ~~an~~ salad.
+- It's <strong>a</strong> ~~an~~ snack.
+- It's <strong>an</strong> ~~a~~ apple.
+- It's <strong>a</strong> ~~an~~ tomato.
+- It's <strong>a</strong> ~~an~~ crayon.
+- It's <strong>a</strong> ~~an~~ potato.
+- It's <strong>an</strong> ~~a~~ orange.
+- It's <strong>a</strong> ~~an~~ poster.
+- It's <strong>an</strong> ~~a~~ eraser.
+- It's <strong>a</strong> ~~an~~ pepper.
+- It's <strong>a</strong> ~~an~~ carrot.
+- It's <strong>a</strong> ~~an~~ bottle.
+- It's <strong>a</strong> ~~an~~ pencil.
+- He sees <strong>an</strong> ~~a~~ owl.
+- It's <strong>a</strong> ~~an~~ banana.
+- It's <strong>a</strong> ~~an~~ muffin.
+- It's <strong>a</strong> ~~an~~ basket.
+- It's <strong>a</strong> ~~an~~ cookie.
+- He sees <strong>a</strong> ~~an~~ cat.
+- It's <strong>a</strong> ~~an~~ window.
+- It's <strong>a</strong> ~~an~~ pancake.
+- There is <strong>a</strong> ~~an~~ nut.
+- It's <strong>a</strong> ~~an~~ sausage.</p>
+<p>[!example]- Round 2 (54 questions)
+- She has <strong>a</strong> ~~an~~ book.
+- There is <strong>a</strong> ~~an~~ cup.
+- There is <strong>a</strong> ~~an~~ bag.
+- It's <strong>a</strong> ~~an~~ biscuit.
+- It's <strong>a</strong> ~~an~~ biscuit.
+- It's <strong>a</strong> ~~an~~ yoghurt.
+- It's <strong>a</strong> ~~an~~ coconut.
+- There is <strong>a</strong> ~~an~~ toy.
+- It's <strong>an</strong> ~~a~~ apricot.
+- There is <strong>a</strong> ~~an~~ pen.
+- There is <strong>an</strong> ~~a~~ egg.
+- It's <strong>a</strong> ~~an~~ picture.
+- There is <strong>a</strong> ~~an~~ wall.
+- I want <strong>a</strong> ~~an~~ banana.
+- There is <strong>a</strong> ~~an~~ lamp.
+- It's <strong>a</strong> ~~an~~ computer.
+- There is <strong>a</strong> ~~an~~ tree.
+- There is <strong>a</strong> ~~an~~ desk.
+- It's <strong>an</strong> ~~a~~ ice cube.
+- There is <strong>a</strong> ~~an~~ book.
+- There is <strong>a</strong> ~~an~~ pear.
+- It's <strong>a</strong> ~~an~~ sandwich.
+- It's <strong>an</strong> ~~a~~ omelette.
+- I want <strong>an</strong> ~~a~~ orange.
+- It's <strong>a</strong> ~~an~~ backpack.
+- It's <strong>an</strong> ~~a~~ umbrella.
+- It's <strong>a</strong> ~~an~~ keyboard.
+- There is <strong>a</strong> ~~an~~ cake.
+- It's <strong>a</strong> ~~an~~ cupboard.
+- There is <strong>a</strong> ~~an~~ kiwi.
+- There is <strong>a</strong> ~~an~~ door.
+- She has <strong>an</strong> ~~a~~ apple.
+- It's <strong>a</strong> ~~an~~ pineapple.
+- It's <strong>an</strong> ~~a~~ ice cream.
+- There is <strong>an</strong> ~~a~~ apple.
+- There is <strong>a</strong> ~~an~~ snack.
+- There is <strong>a</strong> ~~an~~ phone.
+- There is <strong>a</strong> ~~an~~ jelly.
+- It is <strong>an</strong> ~~a~~ elephant.
+- There is <strong>a</strong> ~~an~~ mango.
+- Tom has <strong>a</strong> ~~an~~ pencil.
+- There is <strong>a</strong> ~~an~~ salad.
+- There is <strong>a</strong> ~~an~~ donut.
+- It's <strong>a</strong> ~~an~~ hamburger.
+- It's <strong>a</strong> ~~an~~ chocolate.
+- It's <strong>an</strong> ~~a~~ apple pie.
+- It's <strong>a</strong> ~~an~~ vegetable.
+- There is <strong>a</strong> ~~an~~ board.
+- There is <strong>a</strong> ~~an~~ ruler.
+- Tom has <strong>an</strong> ~~a~~ eraser.
+- There is <strong>a</strong> ~~an~~ grape.
+- There is <strong>a</strong> ~~an~~ pizza.
+- It's <strong>a</strong> ~~an~~ lemon pie.
+- There is <strong>a</strong> ~~an~~ clock.</p>
+<p>[!example]- Round 3 (53 questions)
+- There is <strong>a</strong> ~~an~~ chair.
+- There is <strong>an</strong> ~~a~~ onion.
+- There is <strong>a</strong> ~~an~~ table.
+- There is <strong>a</strong> ~~an~~ lemon.
+- There is <strong>a</strong> ~~an~~ fruit.
+- There is <strong>a</strong> ~~an~~ tomato.
+- It's <strong>a</strong> ~~an~~ television.
+- There is <strong>an</strong> ~~a~~ orange.
+- There is <strong>a</strong> ~~an~~ muffin.
+- There is <strong>a</strong> ~~an~~ basket.
+- There is <strong>a</strong> ~~an~~ poster.
+- It's <strong>a</strong> ~~an~~ watermelon.
+- There is <strong>a</strong> ~~an~~ cookie.
+- There is <strong>a</strong> ~~an~~ potato.
+- There is <strong>a</strong> ~~an~~ crayon.
+- There is <strong>a</strong> ~~an~~ bottle.
+- There is <strong>a</strong> ~~an~~ pencil.
+- There is <strong>an</strong> ~~a~~ eraser.
+- There is <strong>a</strong> ~~an~~ pepper.
+- There is <strong>a</strong> ~~an~~ carrot.
+- There is <strong>a</strong> ~~an~~ banana.
+- There is <strong>a</strong> ~~an~~ window.
+- There is <strong>a</strong> ~~an~~ coconut.
+- There is <strong>an</strong> ~~a~~ apricot.
+- There is <strong>a</strong> ~~an~~ yoghurt.
+- There is <strong>a</strong> ~~an~~ pancake.
+- There is <strong>a</strong> ~~an~~ picture.
+- There is <strong>a</strong> ~~an~~ biscuit.
+- There is <strong>a</strong> ~~an~~ biscuit.
+- There is <strong>a</strong> ~~an~~ sausage.
+- There is <strong>an</strong> ~~a~~ umbrella.
+- There is <strong>a</strong> ~~an~~ backpack.
+- It's <strong>an</strong> ~~a~~ English book.
+- There is <strong>an</strong> ~~a~~ omelette.
+- There is <strong>a</strong> ~~an~~ keyboard.
+- There is <strong>an</strong> ~~a~~ ice cube.
+- There is <strong>a</strong> ~~an~~ computer.
+- There is <strong>a</strong> ~~an~~ cupboard.
+- There is <strong>a</strong> ~~an~~ sandwich.
+- There is <strong>an</strong> ~~a~~ apple pie.
+- There is <strong>a</strong> ~~an~~ lemon pie.
+- There is <strong>a</strong> ~~an~~ hamburger.
+- There is <strong>an</strong> ~~a~~ ice cream.
+- There is <strong>a</strong> ~~an~~ vegetable.
+- There is <strong>a</strong> ~~an~~ pineapple.
+- There is <strong>a</strong> ~~an~~ chocolate.
+- It's <strong>a</strong> ~~an~~ chocolate cake.
+- There is <strong>a</strong> ~~an~~ watermelon.
+- There is <strong>a</strong> ~~an~~ television.
+- It's <strong>a</strong> ~~an~~ chocolate cookie.
+- There is <strong>an</strong> ~~a~~ English book.
+- There is <strong>a</strong> ~~an~~ chocolate cake.
+- There is <strong>a</strong> ~~an~~ chocolate cookie.</p>
+</blockquote>
+<h2 id="a1-comparative-adjectives-er-forms-irregular-forms">A1 · Comparative adjectives (-er forms – irregular forms)</h2>
+<blockquote>
+<p>[!example]- Round 1 (57 questions)
+- Tom is <strong>taller</strong> ~~the tallest~~ (tall) than Ben.
+- Is Tom <strong>taller</strong> ~~the tallest~~ (tall) than Ben?
+- Math is <strong>harder</strong> ~~the hardest~~ (hard) than art.
+- Anna is <strong>younger</strong> ~~the youngest~~ (young) than Tom.
+- Lucy is <strong>shorter</strong> ~~the shortest~~ (short) than Anna.
+- Tom isn't <strong>taller</strong> ~~the tallest~~ (tall) than Ben.
+- Is Lucy <strong>shorter</strong> ~~the shortest~~ (short) than Anna?
+- My dog is <strong>bigger</strong> ~~the biggest~~ (big) than my cat.
+- My dad is <strong>older</strong> ~~the oldest~~ (old) than my mum.
+- My brother is <strong>older</strong> ~~the oldest~~ (old) than me.
+- Is English <strong>harder</strong> ~~the hardest~~ (hard) than math?
+- Lucy isn't <strong>shorter</strong> ~~the shortest~~ (short) than Anna.
+- Winter is <strong>colder</strong> ~~the coldest~~ (cold) than summer.
+- Is winter <strong>colder</strong> ~~the coldest~~ (cold) than summer?
+- My sister is <strong>younger</strong> ~~the youngest~~ (young) than me.
+- My mum is <strong>busier</strong> ~~the busiest~~ (busy) than my dad.
+- Is today <strong>hotter</strong> ~~the hottest~~ (hot) than yesterday?
+- My mum is <strong>younger</strong> ~~the youngest~~ (young) than my dad.
+- Is your phone <strong>newer</strong> ~~the newest~~ (new) than mine?
+- English is <strong>easier</strong> ~~the easiest~~ (easy) than German.
+- Today is <strong>hotter</strong> ~~the hottest~~ (hot) than yesterday.
+- My car is <strong>newer</strong> ~~the newest~~ (new) than your car.
+- The car is <strong>faster</strong> ~~the fastest~~ (fast) than the bus.
+- Is the car <strong>faster</strong> ~~the fastest~~ (fast) than the bus?
+- My brother isn't <strong>older</strong> ~~the oldest~~ (old) than me.
+- My dog is <strong>better</strong> ~~the best~~ (good) than your dog.
+- The bus is <strong>slower</strong> ~~the slowest~~ (slow) than the car.
+- My cat is <strong>nicer</strong> ~~the nicest~~ (nice) than your cat.
+- My dog isn't <strong>bigger</strong> ~~the biggest~~ (big) than my cat.
+- This box is <strong>bigger</strong> ~~the biggest~~ (big) than that one.
+- My bag is <strong>lighter</strong> ~~the lightest~~ (light) than your bag.
+- Winter isn't <strong>colder</strong> ~~the coldest~~ (cold) than summer.
+- I am <strong>happier</strong> ~~the happiest~~ (happy) now than last week.
+- This car is <strong>worse</strong> ~~the worst~~ (bad) than that car.
+- The man is <strong>older</strong> ~~the oldest~~ (old) than the woman.
+- The cow is <strong>bigger</strong> ~~the biggest~~ (big) than the sheep.
+- The boy is <strong>taller</strong> ~~the tallest~~ (tall) than the girl.
+- Is your dog <strong>bigger</strong> ~~the biggest~~ (big) than your cat?
+- This dog is <strong>bigger</strong> ~~the biggest~~ (big) than that cat.
+- My sister isn't <strong>younger</strong> ~~the youngest~~ (young) than me.
+- Is your brother <strong>taller</strong> ~~the tallest~~ (tall) than you?
+- The cat is <strong>quieter</strong> ~~the quietest~~ (quiet) than the dog.
+- My bag is <strong>cheaper</strong> ~~the cheapest~~ (cheap) than your bag.
+- Is the boy <strong>taller</strong> ~~the tallest~~ (tall) than the girl?
+- Is your sister <strong>younger</strong> ~~the youngest~~ (young) than you?
+- That song is <strong>worse</strong> ~~the worst~~ (bad) than this one.
+- My dad is <strong>stronger</strong> ~~the strongest~~ (strong) than my uncle.
+- The girl is <strong>shorter</strong> ~~the shortest~~ (short) than the boy.
+- Today isn't <strong>hotter</strong> ~~the hottest~~ (hot) than yesterday.
+- My book is <strong>better</strong> ~~the best~~ (good) than your book.
+- The fish is <strong>slower</strong> ~~the slowest~~ (slow) than the bird.
+- The woman is <strong>taller</strong> ~~the tallest~~ (tall) than the man.
+- The bird is <strong>faster</strong> ~~the fastest~~ (fast) than the fish.
+- The train is <strong>longer</strong> ~~the longest~~ (long) than the bus.
+- The coffee is <strong>hotter</strong> ~~the hottest~~ (hot) than the tea.
+- Is your mum <strong>busier</strong> ~~the busiest~~ (busy) than your dad?
+- Is that song <strong>worse</strong> ~~the worst~~ (bad) than this one?</p>
+<p>[!example]- Round 2 (58 questions)
+- This bag is <strong>smaller</strong> ~~the smallest~~ (small) than that bag.
+- Is the lion <strong>faster</strong> ~~the fastest~~ (fast) than the tiger?
+- The fish is <strong>quieter</strong> ~~the quietest~~ (quiet) than the duck.
+- The bus is <strong>shorter</strong> ~~the shortest~~ (short) than the train.
+- The duck is <strong>noisier</strong> ~~the noisiest~~ (noisy) than the fish.
+- The bear is <strong>fatter</strong> ~~the fattest~~ (fat) than the monkey.
+- The lion is <strong>stronger</strong> ~~the strongest~~ (strong) than the dog.
+- Is this book <strong>easier</strong> ~~the easiest~~ (easy) than that one?
+- Is this toy <strong>cheaper</strong> ~~the cheapest~~ (cheap) than that one?
+- That movie is <strong>worse</strong> ~~the worst~~ (bad) than this one.
+- The woman is <strong>shorter</strong> ~~the shortest~~ (short) than the man.
+- This film is <strong>better</strong> ~~the best~~ (good) than the book.
+- My house is <strong>bigger</strong> ~~the biggest~~ (big) than your house.
+- Is this film <strong>better</strong> ~~the best~~ (good) than that one?
+- The water is <strong>colder</strong> ~~the coldest~~ (cold) than the milk.
+- My house is <strong>nicer</strong> ~~the nicest~~ (nice) than your flat.
+- The sheep is <strong>smaller</strong> ~~the smallest~~ (small) than the cow.
+- My phone is <strong>newer</strong> ~~the newest~~ (new) than your phone.
+- That cat is <strong>smaller</strong> ~~the smallest~~ (small) than this dog.
+- The mouse is <strong>smaller</strong> ~~the smallest~~ (small) than the cat.
+- The tiger is <strong>faster</strong> ~~the fastest~~ (fast) than the lion.
+- Is the fish <strong>quieter</strong> ~~the quietest~~ (quiet) than the duck?
+- This cat is <strong>smaller</strong> ~~the smallest~~ (small) than that dog.
+- My dog isn't <strong>better</strong> ~~the best~~ (good) than your dog.
+- This house is <strong>older</strong> ~~the oldest~~ (old) than that one.
+- This car is <strong>faster</strong> ~~the fastest~~ (fast) than that bike.
+- This book is <strong>easier</strong> ~~the easiest~~ (easy) than that book.
+- The baby is <strong>younger</strong> ~~the youngest~~ (young) than the child.
+- The town is <strong>bigger</strong> ~~the biggest~~ (big) than the village.
+- My bag isn't <strong>lighter</strong> ~~the lightest~~ (light) than your bag.
+- The boy isn't <strong>taller</strong> ~~the tallest~~ (tall) than the girl.
+- The dog is <strong>friendlier</strong> ~~the friendliest~~ (friendly) than the cat.
+- This box isn't <strong>bigger</strong> ~~the biggest~~ (big) than that one.
+- That tree is <strong>shorter</strong> ~~the shortest~~ (short) than this one.
+- The cat isn't <strong>quieter</strong> ~~the quietest~~ (quiet) than the dog.
+- This book is <strong>thicker</strong> ~~the thickest~~ (thick) than that one.
+- The cake is <strong>sweeter</strong> ~~the sweetest~~ (sweet) than the bread.
+- The monkey is <strong>thinner</strong> ~~the thinnest~~ (thin) than the bear.
+- This tree is <strong>taller</strong> ~~the tallest~~ (tall) than that tree.
+- The rabbit is <strong>smaller</strong> ~~the smallest~~ (small) than the fox.
+- This game is <strong>better</strong> ~~the best~~ (good) than that game.
+- The baby is <strong>smaller</strong> ~~the smallest~~ (small) than the child.
+- This road is <strong>longer</strong> ~~the longest~~ (long) than that road.
+- This joke is <strong>funnier</strong> ~~the funniest~~ (funny) than that one.
+- Is the dog <strong>friendlier</strong> ~~the friendliest~~ (friendly) than the cat?
+- This room is <strong>cleaner</strong> ~~the cleanest~~ (clean) than that room.
+- This apple is <strong>bigger</strong> ~~the biggest~~ (big) than that apple.
+- The tiger is <strong>stronger</strong> ~~the strongest~~ (strong) than the bear.
+- My sister is <strong>faster</strong> ~~the fastest~~ (fast) than my brother.
+- My grandma is <strong>older</strong> ~~the oldest~~ (old) than my grandpa.
+- The girl isn't <strong>shorter</strong> ~~the shortest~~ (short) than the boy.
+- This ball is <strong>rounder</strong> ~~the roundest~~ (round) than that ball.
+- The shop isn't <strong>busier</strong> ~~the busiest~~ (busy) than the park.
+- The coffee isn't <strong>hotter</strong> ~~the hottest~~ (hot) than the tea.
+- The park is <strong>cleaner</strong> ~~the cleanest~~ (clean) than the street.
+- This sofa is <strong>softer</strong> ~~the softest~~ (soft) than that chair.
+- The tiger isn't <strong>faster</strong> ~~the fastest~~ (fast) than the lion.
+- The water isn't <strong>colder</strong> ~~the coldest~~ (cold) than the milk.</p>
+<p>[!example]- Round 3 (57 questions)
+- My grandpa is <strong>taller</strong> ~~the tallest~~ (tall) than my grandma.
+- This chair is <strong>softer</strong> ~~the softest~~ (soft) than that chair.
+- This street is <strong>cleaner</strong> ~~the cleanest~~ (clean) than that one.
+- The elephant is <strong>bigger</strong> ~~the biggest~~ (big) than the horse.
+- My friend is <strong>funnier</strong> ~~the funniest~~ (funny) than my brother.
+- Is the street <strong>cleaner</strong> ~~the cleanest~~ (clean) than yesterday?
+- This car isn't <strong>faster</strong> ~~the fastest~~ (fast) than that bike.
+- The mouse isn't <strong>smaller</strong> ~~the smallest~~ (small) than the cat.
+- Is your dad <strong>stronger</strong> ~~the strongest~~ (strong) than your uncle?
+- The village is <strong>quieter</strong> ~~the quietest~~ (quiet) than the town.
+- The lion isn't <strong>stronger</strong> ~~the strongest~~ (strong) than the dog.
+- This cat isn't <strong>smaller</strong> ~~the smallest~~ (small) than that dog.
+- Is the elephant <strong>bigger</strong> ~~the biggest~~ (big) than the horse?
+- This toy isn't <strong>cheaper</strong> ~~the cheapest~~ (cheap) than that one.
+- The turtle is <strong>slower</strong> ~~the slowest~~ (slow) than the rabbit.
+- This table is <strong>higher</strong> ~~the highest~~ (high) than that table.
+- Is the rabbit <strong>faster</strong> ~~the fastest~~ (fast) than the turtle?
+- This coat is <strong>heavier</strong> ~~the heaviest~~ (heavy) than that jacket.
+- This toy is <strong>more expensive</strong> ~~the most expensive~~ (expensive) than that one.
+- Is this computer <strong>faster</strong> ~~the fastest~~ (fast) than that one?
+- My brother is <strong>stronger</strong> ~~the strongest~~ (strong) than my sister.
+- Is the park <strong>bigger</strong> ~~the biggest~~ (big) than the playground?
+- Is your car <strong>newer</strong> ~~the newest~~ (new) than your dad's car?
+- This film isn't <strong>better</strong> ~~the best~~ (good) than that book.
+- This computer is <strong>faster</strong> ~~the fastest~~ (fast) than that one.
+- This ruler is <strong>shorter</strong> ~~the shortest~~ (short) than that ruler.
+- This book isn't <strong>easier</strong> ~~the easiest~~ (easy) than that book.
+- The rabbit is <strong>quicker</strong> ~~the quickest~~ (quick) than the turtle.
+- My friend is <strong>better</strong> ~~the best~~ (good) at English than me.
+- The elephant is <strong>heavier</strong> ~~the heaviest~~ (heavy) than the horse.
+- This lesson isn't <strong>harder</strong> ~~the hardest~~ (hard) than that one.
+- This orange is <strong>smaller</strong> ~~the smallest~~ (small) than that apple.
+- Is the teacher <strong>kinder</strong> ~~the kindest~~ (kind) than the student?
+- The horse is <strong>lighter</strong> ~~the lightest~~ (light) than the elephant.
+- The road isn't <strong>longer</strong> ~~the longest~~ (long) than that street.
+- This pencil is <strong>longer</strong> ~~the longest~~ (long) than that pencil.
+- My teacher is <strong>kinder</strong> ~~the kindest~~ (kind) than your teacher.
+- My grandma isn't <strong>older</strong> ~~the oldest~~ (old) than my grandpa.
+- The elephant isn't <strong>bigger</strong> ~~the biggest~~ (big) than the horse.
+- The turtle isn't <strong>slower</strong> ~~the slowest~~ (slow) than the rabbit.
+- The shop is <strong>busier</strong> ~~the busiest~~ (busy) today than yesterday.
+- The grandfather is <strong>older</strong> ~~the oldest~~ (old) than the child.
+- The student is <strong>smarter</strong> ~~the smartest~~ (smart) than the teacher.
+- Is the shop <strong>busier</strong> ~~the busiest~~ (busy) today than yesterday?
+- The blue car is <strong>faster</strong> ~~the fastest~~ (fast) than the scooter.
+- This flower is <strong>prettier</strong> ~~the prettiest~~ (pretty) than that flower.
+- This picture is <strong>nicer</strong> ~~the nicest~~ (nice) than that picture.
+- This street is <strong>narrower</strong> ~~the narrowest~~ (narrow) than that street.
+- The teacher is <strong>stricter</strong> ~~the strictest~~ (strict) than the student.
+- My friend is <strong>happier</strong> ~~the happiest~~ (happy) today than yesterday.
+- This exercise is <strong>harder</strong> ~~the hardest~~ (hard) than that exercise.
+- This picture isn't <strong>nicer</strong> ~~the nicest~~ (nice) than that picture.
+- This class is <strong>easier</strong> ~~the easiest~~ (easy) than last year's class.
+- Is your dog <strong>nicer</strong> ~~the nicest~~ (nice) than your neighbour's dog?
+- This lesson is <strong>easier</strong> ~~the easiest~~ (easy) than yesterday's lesson.
+- The blue monster truck is <strong>slower</strong> ~~the slowest~~ (slow) than the scooter.
+- Is your house <strong>smaller</strong> ~~the smallest~~ (small) than your neighbour's house?</p>
+</blockquote>
+<h2 id="a1-present-simple-questions-short-answers">A1 · Present simple (questions – short answers)</h2>
+<blockquote>
+<p>[!example]- Round 1 (103 questions)
+- <strong>Does</strong> ~~Do~~ Tom read before bed?
+- <strong>Does</strong> ~~Do~~ she get up at seven?
+- <strong>Does</strong> ~~Do~~ your dad drive to work?
+- <strong>Do</strong> ~~Does~~ we have lunch at school?
+- <strong>Does</strong> ~~Do~~ he eat breakfast at home?
+- <strong>Do</strong> ~~Does~~ they go to school by bus?
+- <strong>Do</strong> ~~Does~~ cats sleep during the day?
+- <strong>Do you</strong> ~~You do / Does you / Do~~ walk to school? — Yes, I do.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ walk to school? — Yes, I do.
+- Does he walk to school? — No, <strong>he doesn't</strong> ~~he does / he don't / he do~~.
+- <strong>Does your dad</strong> ~~Your dad does / Do your dad / Does~~ drive to work? — Yes, he does.
+- Do you walk to school? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- <strong>Does your dad</strong> ~~Your dad does / Do your dad / Does~~ drive to work? — Yes, he does.
+- Do you walk to school? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- <strong>Does</strong> ~~Do~~ Anna do her homework every day?
+- <strong>Do</strong> ~~Does~~ you study English after school?
+- Does she walk to school? — No, <strong>she doesn't</strong> ~~she does / she don't / she do~~.
+- Does he walk to school? — Yes, <strong>he does</strong> ~~he doesn't / he do / he don't~~.
+- <strong>Does he</strong> ~~He does / Do he / Does~~ walk to school? — Yes, he does.
+- When <strong>does the lesson</strong> ~~the lesson does / do the lesson / does~~ start? — It starts at nine.
+- Does she go to bed early? — No, <strong>she does not</strong> ~~she does / she do not / she do~~.
+- <strong>Does she</strong> ~~She does / Do she / Does~~ walk to school? — Yes, she does.
+- Does she walk to school? — Yes, <strong>she does</strong> ~~she doesn't / she do / she don't~~.
+- <strong>Does he</strong> ~~He does / Do he / Does~~ walk to school? — No, he doesn't.
+- <strong>Does she</strong> ~~She does / Do she / Does~~ go to bed early? — Yes, she does.
+- When <strong>do you</strong> ~~you do / does you / do~~ get up? — I get up at seven.
+- Does she go to bed early? — Yes, <strong>she does</strong> ~~she doesn't / she do / she don't~~.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ go to school by bus? — Yes, I do.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ go running every day? — Yes, I do.
+- Do we eat lunch at school? — Yes, <strong>we do</strong> ~~we don't / we does / we doesn't~~.
+- <strong>Do we</strong> ~~We do / Does we / Do~~ eat lunch at school? — Yes, we do.
+- <strong>Do we</strong> ~~We do / Does we / Do~~ eat lunch at school? — Yes, we do.
+- Do we eat lunch at school? — Yes, <strong>we do</strong> ~~we don't / we does / we doesn't~~.
+- When do you get up? — <strong>I get</strong> ~~Do I get / I gets / He gets~~ up at seven.
+- <strong>Does she</strong> ~~She does / Do she / Does~~ walk to school? — No, she doesn't.
+- Do you go to school by bus? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- Do you eat sweets every day? — No, <strong>I do not</strong> ~~I do / I does not / I don't~~.
+- <strong>Do</strong> ~~Does~~ the boys play football after class?
+- Do you eat sweets every day? — No, <strong>I do not</strong> ~~I do / I does not / I don't~~.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ watch TV every evening? — Yes, I do.
+- Do you go running every day? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- Do they take the bus to work? — No, <strong>they don't</strong> ~~they do / they does / they doesn't~~.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ watch TV every evening? — Yes, I do.
+- <strong>Does his dad</strong> ~~His dad does / Do his dad / Does~~ drive him to school? — Yes, he does.
+- <strong>Does your dad</strong> ~~Your dad does / Do your dad / Does~~ drive you to school? — Yes, he does.
+- <strong>Does your dad</strong> ~~Your dad does / Do your dad / Does~~ drive you to school? — Yes, he does.
+- <strong>Does your dad</strong> ~~Your dad does / Do your dad / Does~~ drive you to school? — Yes, he does.
+- <strong>Does Luke</strong> ~~Luke does / Do Luke / Does~~ watch films at home? — Yes, he does.
+- <strong>Does Tom</strong> ~~Tom does / Do Tom / Does~~ watch films at home? — Yes, he does.
+- <strong>Does she</strong> ~~She does / Do she / Does~~ go to bed early? — No, she does not.
+- Does your dad drive to work? — Yes, <strong>he does</strong> ~~he doesn't / he do / he don't~~.
+- Does your dad drive to work? — Yes, <strong>he does</strong> ~~he doesn't / he do / he don't~~.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ read a book before bed? — Yes, I do.
+- Does Tom watch films at home? — Yes, <strong>he does</strong> ~~he doesn't / he do / he don't~~.
+- When <strong>do you</strong> ~~you do / does you / do~~ go to bed? — I go to bed at ten.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ eat sweets every day? — No, I do not.
+- Do they eat breakfast at home? — No, <strong>they don't</strong> ~~they do / they does / they doesn't~~.
+- Do they take the bus to work? — Yes, <strong>they do</strong> ~~they don't / they does / they doesn't~~.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ eat sweets every day? — No, I do not.
+- <strong>Does he</strong> ~~He does / Do he / Does~~ go running every day? — Yes, he does.
+- <strong>Do they</strong> ~~They do / Does they / Do~~ take the bus to work? — Yes, they do.
+- Does he go running every day? — Yes, <strong>he does</strong> ~~he doesn't / he do / he don't~~.
+- Does she go running every day? — No, <strong>she doesn't</strong> ~~she does / she don't / she do~~.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ get up early on weekdays? — Yes, I do.
+- When does the lesson start? — <strong>It starts</strong> ~~Does it start / It start / I start~~ at nine.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ get up early on weekdays? — Yes, I do.
+- Do you read a book before bed? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- Do they read a book before bed? — No, <strong>they don't</strong> ~~they do / they does / they doesn't~~.
+- Do they watch TV every evening? — No, <strong>they don't</strong> ~~they do / they does / they doesn't~~.
+- Do you watch TV every evening? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- Does Luke watch films at home? — Yes, <strong>he does</strong> ~~he doesn't / he do / he don't~~.
+- Do you watch TV every evening? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- What time do you wake up? — <strong>I wake</strong> ~~Do I wake / I wakes / He wakes~~ up at six.
+- When does the lesson start? — <strong>The lesson starts</strong> ~~Does the lesson start / The lesson start / I start~~ at nine.
+- What time <strong>do you</strong> ~~you do / does you / do~~ wake up? — I wake up at six.
+- When <strong>do you</strong> ~~you do / does you / do~~ go to bed? — I go to bed at nine.
+- <strong>Do they</strong> ~~They do / Does they / Do~~ watch TV every evening? — Yes, they do.
+- When do you go to bed? — <strong>I go</strong> ~~Do I go / I goes / He goes~~ to bed at ten.
+- Do we study English on Mondays? — Yes, <strong>we do</strong> ~~we don't / we does / we doesn't~~.
+- <strong>Do they</strong> ~~They do / Does they / Do~~ take the bus to work? — No, they don't.
+- Do they have breakfast together? — No, <strong>they don't</strong> ~~they do / they does / they doesn't~~.
+- Do you take the train to school? — No, <strong>I don't</strong> ~~I do / I does / I doesn't~~.
+- <strong>Do we</strong> ~~We do / Does we / Do~~ study English on Mondays? — Yes, we do.
+- <strong>Do your parents</strong> ~~Your parents do / Does your parents / Do~~ take the train to work? — Yes, they do.
+- What time do they wake up? — <strong>They wake</strong> ~~Do they wake / They wakes / He wakes~~ up at six.
+- Do they watch TV every evening? — Yes, <strong>they do</strong> ~~they don't / they does / they doesn't~~.
+- <strong>Does your brother</strong> ~~Your brother does / Do your brother / Does~~ read a book before bed? — Yes, he does.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ listen to music every day? — Yes, I do.
+- <strong>Do your parents</strong> ~~Your parents do / Does your parents / Do~~ watch TV every evening? — Yes, they do.
+- <strong>Do your parents</strong> ~~Your parents do / Does your parents / Do~~ read a book before bed? — Yes, they do.
+- Do we study English on Mondays? — Yes, <strong>we do</strong> ~~we don't / we does / we doesn't~~.
+- Does Tom read a book before bed? — No, <strong>he does not</strong> ~~he does / he do not / he do~~.
+- What <strong>do you</strong> ~~you do / does you / do~~ eat for lunch? — I eat sandwiches.
+- <strong>Do we</strong> ~~We do / Does we / Do~~ study English on Mondays? — Yes, we do.
+- What <strong>do you</strong> ~~you do / does you / do~~ eat for lunch? — I eat sandwiches.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ take the train to school? — No, I don't.
+- Do you get up early on weekdays? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- Where does she study English? — <strong>She studies</strong> ~~Does she study / She study / I study~~ at home.
+- Do they have breakfast together? — Yes, <strong>they do</strong> ~~they don't / they does / they doesn't~~.
+- What time do you wake up? — <strong>I wake</strong> ~~Do I wake / I wakes / He wakes~~ up at seven.
+- Does she watch TV in the evening? — No, <strong>she doesn't</strong> ~~she does / she don't / she do~~.
+- What time does she wake up? — <strong>She wakes</strong> ~~Does she wake / She wake / I wake~~ up at six.
+- What do you eat for lunch? — <strong>I eat</strong> ~~Do I eat / I eats / He eats~~ sandwiches.</p>
+<p>[!example]- Round 2 (104 questions)
+- <strong>Does she</strong> ~~She does / Do she / Does~~ go running every day? — No, she doesn't.
+- <strong>Do they</strong> ~~They do / Does they / Do~~ have breakfast together? — Yes, they do.
+- <strong>Does his sister</strong> ~~His sister does / Do his sister / Does~~ watch TV every evening? — Yes, she does.
+- <strong>Do they</strong> ~~They do / Does they / Do~~ eat breakfast at home? — No, they don't.
+- <strong>Does his sister</strong> ~~His sister does / Do his sister / Does~~ watch TV every evening? — Yes, she does.
+- What time <strong>do you</strong> ~~you do / does you / do~~ wake up? — I wake up at seven.
+- What do you eat for lunch? — <strong>I eat</strong> ~~Do I eat / I eats / He eats~~ sandwiches.
+- Does he get up early on weekdays? — No, <strong>he does not</strong> ~~he does / he do not / he do~~.
+- Does he get up early on weekdays? — No, <strong>he does not</strong> ~~he does / he do not / he do~~.
+- Where does she study English? — <strong>She studies</strong> ~~Does she study / She study / I study~~ at home.
+- Does she watch TV in the evening? — No, <strong>she doesn't</strong> ~~she does / she don't / she do~~.
+- Do you get up early on weekdays? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- When <strong>does the lesson</strong> ~~the lesson does / do the lesson / does~~ start? — The lesson starts at nine.
+- Do you go running on the weekend? — No, <strong>I do not</strong> ~~I do / I does not / I don't~~.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ help your teacher in class? — Yes, I do.
+- When do you go to bed? — <strong>I go</strong> ~~Do I go / I goes / He goes~~ to bed at nine.
+- <strong>Do they</strong> ~~They do / Does they / Do~~ read a book before bed? — No, they don't.
+- What time do they wake up? — <strong>They wake</strong> ~~Do they wake / They wakes / He wakes~~ up at eight.
+- Do you play football after school? — No, <strong>I don't</strong> ~~I do / I does / I doesn't~~.
+- Do you listen to music every day? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- What time does he wake up? — <strong>He wakes</strong> ~~Does he wake / He wake / I wake~~ up at seven.
+- Does his dad drive him to school? — Yes, <strong>he does</strong> ~~he doesn't / he do / he don't~~.
+- <strong>Do your parents</strong> ~~Your parents do / Does your parents / Do~~ watch TV every evening? — No, they don't.
+- What time does he wake up? — <strong>He wakes</strong> ~~Does he wake / He wake / I wake~~ up at eight.
+- What time <strong>do they</strong> ~~they do / does they / do~~ wake up? — They wake up at six.
+- Does Lucy watch TV in the morning? — No, <strong>she doesn't</strong> ~~she does / she don't / she do~~.
+- <strong>Do they</strong> ~~They do / Does they / Do~~ watch TV every evening? — No, they don't.
+- Does Lucy watch TV in the morning? — No, <strong>she doesn't</strong> ~~she does / she don't / she do~~.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ eat breakfast every morning? — Yes, I do.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ eat breakfast every morning? — Yes, I do.
+- <strong>Do they</strong> ~~They do / Does they / Do~~ take the train to school? — Yes, they do.
+- Do they take the train to school? — Yes, <strong>they do</strong> ~~they don't / they does / they doesn't~~.
+- What time <strong>does your mom</strong> ~~your mom does / do your mom / does~~ wake up? — She wakes up at six.
+- What time <strong>does she</strong> ~~she does / do she / does~~ wake up? — She wakes up at six.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ help your teacher in class? — Yes, we do.
+- Do you play football after school? — No, <strong>I don't</strong> ~~I do / I does / I doesn't~~.
+- What time <strong>does your mom</strong> ~~your mom does / do your mom / does~~ wake up? — She wakes up at six.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ play football after school? — No, I don't.
+- What time does she wake up? — <strong>She wakes</strong> ~~Does she wake / She wake / I wake~~ up at seven.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ play football after school? — No, I don't.
+- Does your dad drive you to school? — Yes, <strong>he does</strong> ~~he doesn't / he do / he don't~~.
+- <strong>Does he</strong> ~~He does / Do he / Does~~ drink milk in the morning? — Yes, he does.
+- Does John take the train to school? — No, <strong>he does not</strong> ~~he does / he do not / he do~~.
+- Does she listen to music every day? — No, <strong>she doesn't</strong> ~~she does / she don't / she do~~.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ wash your face every morning? — Yes, I do.
+- Does he drink milk in the morning? — Yes, <strong>he does</strong> ~~he doesn't / he do / he don't~~.
+- Does your dad drive you to school? — Yes, <strong>he does</strong> ~~he doesn't / he do / he don't~~.
+- What time <strong>does he</strong> ~~he does / do he / does~~ wake up? — He wakes up at eight.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ have a shower in the morning? — Yes, I do.
+- What time <strong>does your dad</strong> ~~your dad does / do your dad / does~~ wake up? — He wakes up at seven.
+- <strong>Does Tom</strong> ~~Tom does / Do Tom / Does~~ read a book before bed? — No, he does not.
+- Does he drink milk in the morning? — Yes, <strong>he does</strong> ~~he doesn't / he do / he don't~~.
+- <strong>Does Ben</strong> ~~Ben does / Do Ben / Does~~ listen to music every day? — Yes, he does.
+- <strong>Does he</strong> ~~He does / Do he / Does~~ drink milk in the morning? — Yes, he does.
+- What time <strong>does your dad</strong> ~~your dad does / do your dad / does~~ wake up? — He wakes up at seven.
+- <strong>Do they</strong> ~~They do / Does they / Do~~ have breakfast together? — No, they don't.
+- Who cooks dinner in your family? — <strong>My mom cooks</strong> ~~Does she cook / My mom cook / I cook~~ dinner.
+- When <strong>does the lesson</strong> ~~the lesson does / do the lesson / does~~ start on Mondays? — It starts at ten.
+- Who cooks dinner in your family? — <strong>My mom cooks</strong> ~~Does she cook / She cook / Cook she~~ dinner.
+- Do you help your teacher in class? — Yes, <strong>we do</strong> ~~we don't / we does / we doesn't~~.
+- When <strong>does the lesson</strong> ~~the lesson does / do the lesson / does~~ start on Mondays? — It starts at ten.
+- <strong>Does she</strong> ~~She does / Do she / Does~~ get up early on weekdays? — Yes, she does.
+- Do you drink coffee in the morning? — No, <strong>I do not</strong> ~~I do / I does not / I don't~~.
+- Do you drink coffee in the morning? — No, <strong>I don't</strong> ~~I do / I does / I doesn't~~.
+- Does he play football after school? — No, <strong>he does not</strong> ~~he does / he do not / he do~~.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ go running on the weekend? — No, I do not.
+- What time <strong>does he</strong> ~~he does / do he / does~~ wake up? — He wakes up at seven.
+- Does she get up early on weekdays? — Yes, <strong>she does</strong> ~~she doesn't / she do / she don't~~.
+- <strong>Does she</strong> ~~She does / Do she / Does~~ get up early on weekdays? — Yes, she does.
+- Does she get up early on weekdays? — Yes, <strong>she does</strong> ~~she doesn't / she do / she don't~~.
+- Does your dad drive you to school? — Yes, <strong>he does</strong> ~~he doesn't / he do / he don't~~.
+- Do you help your teacher in class? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- Does Ben listen to music every day? — Yes, <strong>he does</strong> ~~he doesn't / he do / he don't~~.
+- Where <strong>does she</strong> ~~she does / do she / does~~ study English? — She studies at home.
+- Where <strong>does she</strong> ~~she does / do she / does~~ study English? — She studies at home.
+- <strong>Does Lucy</strong> ~~Lucy does / Do Lucy / Does~~ watch TV in the morning? — No, she doesn't.
+- What time <strong>does she</strong> ~~she does / do she / does~~ wake up? — She wakes up at seven.
+- Do you eat breakfast every morning? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ drink coffee in the morning? — No, I don't.
+- <strong>Does she</strong> ~~She does / Do she / Does~~ watch TV in the evening? — No, she doesn't.
+- Do you eat breakfast every morning? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- Do you read the newspaper every day? — No, <strong>I don't</strong> ~~I do / I does / I doesn't~~.
+- <strong>Does he</strong> ~~He does / Do he / Does~~ play football after school? — Yes, he does.
+- <strong>Does she</strong> ~~She does / Do she / Does~~ watch TV in the evening? — No, she doesn't.
+- Does he play football after school? — Yes, <strong>he does</strong> ~~he doesn't / he do / he don't~~.
+- What time <strong>do they</strong> ~~they do / does they / do~~ wake up? — They wake up at eight.
+- <strong>Does Lucy</strong> ~~Lucy does / Do Lucy / Does~~ watch TV in the morning? — No, she doesn't.
+- Do you read the newspaper every day? — No, <strong>I do not</strong> ~~I do / I does not / I don't~~.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ read the newspaper every day? — No, I don't.
+- <strong>Does he</strong> ~~He does / Do he / Does~~ get up early on weekdays? — No, he does not.
+- When do they start school? — <strong>They start</strong> ~~Do they start / They starts / He starts~~ school at nine.
+- Do you have a shower in the morning? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- Does he wash his face every morning? — Yes, <strong>he does</strong> ~~he doesn't / he do / he don't~~.
+- <strong>Does he</strong> ~~He does / Do he / Does~~ wash his face every morning? — Yes, he does.
+- When do you start school? — <strong>I start</strong> ~~Do I start / I starts / He starts~~ school at eight.
+- <strong>Does John</strong> ~~John does / Do John / Does~~ take the train to school? — No, he does not.
+- Do you wash your face every morning? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- Does she wash her face every morning? — No, <strong>she doesn't</strong> ~~she does / she don't / she do~~.
+- <strong>Does he</strong> ~~He does / Do he / Does~~ get up early on weekdays? — No, he does not.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ listen to music in the evening? — Yes, I do.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ brush your teeth every morning? — Yes, I do.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ drink coffee in the morning? — No, I do not.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ brush your teeth every morning? — Yes, I do.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ do your homework in the evening? — Yes, I do.</p>
+<p>[!example]- Round 3 (103 questions)
+- <strong>When do you</strong> ~~you do / When does you / do~~ go to bed on weekdays? — I go to bed at nine.
+- <strong>Does he</strong> ~~He does / Do he / Does~~ have a shower in the morning? — Yes, he does.
+- Does she have a shower in the morning? — No, <strong>she doesn't</strong> ~~she does / she don't / she do~~.
+- What time does your mom wake up? — <strong>She wakes</strong> ~~Does she wake / She wake / I wake~~ up at six.
+- <strong>Does he</strong> ~~He does / Do he / Does~~ have a shower in the morning? — Yes, he does.
+- Does she have a shower in the morning? — No, <strong>she doesn't</strong> ~~she does / she don't / she do~~.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ read the newspaper every day? — No, I do not.
+- Does he have a shower in the morning? — Yes, <strong>he does</strong> ~~he doesn't / he do / he don't~~.
+- Does he have a shower in the morning? — Yes, <strong>he does</strong> ~~he doesn't / he do / he don't~~.
+- <strong>Does she</strong> ~~She does / Do she / Does~~ listen to music every day? — No, she doesn't.
+- What time does your mom wake up? — <strong>She wakes</strong> ~~Does she wake / She wake / I wake~~ up at six.
+- When <strong>do you</strong> ~~you do / does you / do~~ start school? — I start school at eight.
+- Does Alex have a shower in the morning? — No, <strong>he does not</strong> ~~he does / he do not / he do~~.
+- <strong>Do they</strong> ~~They do / Does they / Do~~ wash their face every morning? — Yes, they do.
+- Do they listen to music in the evening? — No, <strong>they don't</strong> ~~they do / they does / they doesn't~~.
+- Do they wash their face every morning? — Yes, <strong>they do</strong> ~~they don't / they does / they doesn't~~.
+- Do you brush your teeth every morning? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- Do you listen to music in the evening? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- Do you brush your teeth every morning? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- <strong>Does he</strong> ~~He does / Do he / Does~~ play football after school? — No, he does not.
+- Do your parents watch TV every evening? — No, <strong>they don't</strong> ~~they do / they does / they doesn't~~.
+- <strong>Does Anna</strong> ~~Anna does / Do Anna / Does~~ have a shower in the morning? — Yes, she does.
+- What time does your dad wake up? — <strong>He wakes</strong> ~~Does he wake / He wake / I wake~~ up at seven.
+- What time does your dad wake up? — <strong>He wakes</strong> ~~Does he wake / He wake / She wakes~~ up at seven.
+- When <strong>do they</strong> ~~they do / does they / do~~ start school? — They start school at nine.
+- Do your parents read a book before bed? — Yes, <strong>they do</strong> ~~they don't / they does / they doesn't~~.
+- <strong>Does your mom</strong> ~~Your mom does / Do your mom / Does~~ drink coffee in the morning? — No, she doesn't.
+- <strong>Does she</strong> ~~She does / Do she / Does~~ wash her face every morning? — No, she doesn't.
+- How often <strong>do you</strong> ~~you do / does you / do~~ read books? — I read books every day.
+- Do your parents take the train to work? — Yes, <strong>they do</strong> ~~they don't / they does / they doesn't~~.
+- Do your parents watch TV every evening? — Yes, <strong>they do</strong> ~~they don't / they does / they doesn't~~.
+- Do you do your homework in the evening? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- How often do you read books? — <strong>I read</strong> ~~Do I read / I reads / He reads~~ books every day.
+- Does his sister watch TV every evening? — Yes, <strong>she does</strong> ~~she doesn't / she do / she don't~~.
+- <strong>Does your mom</strong> ~~Your mom does / Do your mom / Does~~ drink coffee in the morning? — No, she doesn't.
+- Does Anna have a shower in the morning? — Yes, <strong>she does</strong> ~~she doesn't / she do / she don't~~.
+- Does his sister watch TV every evening? — Yes, <strong>she does</strong> ~~she doesn't / she do / she don't~~.
+- <strong>Does Alex</strong> ~~Alex does / Do Alex / Does~~ have a shower in the morning? — No, he does not.
+- When does the lesson start on Mondays? — <strong>It starts</strong> ~~Does it start / It start / I start~~ at ten.
+- <strong>Does your sister</strong> ~~Your sister does / Do your sister / Does~~ do her homework in the evening? — Yes, she does.
+- <strong>Does she</strong> ~~She does / Do she / Does~~ have a shower in the morning? — No, she doesn't.
+- What time <strong>does your friend</strong> ~~your friend does / do your friend / does~~ finish school? — He finishes at three.
+- <strong>Does she</strong> ~~She does / Do she / Does~~ have a shower in the morning? — No, she doesn't.
+- How often do you read books? — <strong>I read</strong> ~~Do I read / I reads / He reads~~ books every week.
+- Do they do their homework in the evening? — No, <strong>they don't</strong> ~~they do / they does / they doesn't~~.
+- How often <strong>do you</strong> ~~you do / does you / do~~ read books? — I read books every week.
+- When does the lesson start on Mondays? — <strong>It starts</strong> ~~Does it start / It start / I start~~ at ten.
+- Who <strong>cooks</strong> ~~do / does / cook~~ dinner in your family? — My mom cooks dinner.
+- When <strong>do you</strong> ~~you do / does you / do~~ have breakfast? — I have breakfast at seven.
+- When <strong>does he</strong> ~~he does / do he / does~~ have breakfast? — He has breakfast at eight.
+- Does your brother read a book before bed? — Yes, <strong>he does</strong> ~~he doesn't / he do / he don't~~.
+- When <strong>do you</strong> ~~you do / does you / do~~ have breakfast? — I have breakfast at eight.
+- When <strong>does he</strong> ~~he does / do he / does~~ have breakfast? — He has breakfast at eight.
+- When do you have breakfast? — <strong>I have</strong> ~~Do I have / I has / He has~~ breakfast at eight.
+- Does your mom drink coffee in the morning? — No, <strong>she doesn't</strong> ~~she does / she don't / she do~~.
+- When <strong>do you</strong> ~~you do / does you / do~~ go to bed on weekdays? — I go to bed at ten.
+- Does your mom drink coffee in the morning? — No, <strong>she doesn't</strong> ~~she does / she don't / she do~~.
+- Who <strong>cooks</strong> ~~do / does / cook~~ dinner in your family? — My mom cooks dinner.
+- When do you have breakfast? — <strong>I have</strong> ~~Do I have / I has / He has~~ breakfast at seven.
+- <strong>Do they</strong> ~~They do / Does they / Do~~ listen to music in the evening? — No, they don't.
+- What time do they finish school? — <strong>They finish</strong> ~~Do they finish / They finishes / He finishes~~ school at four.
+- When do you have lunch at school? — <strong>I have</strong> ~~Do I have / I has / He has~~ lunch at noon.
+- When <strong>do you</strong> ~~you do / does you / do~~ have lunch at school? — I have lunch at noon.
+- What time <strong>do you</strong> ~~you do / does you / do~~ go home on Mondays? — I go home at four.
+- When does he have breakfast? — <strong>He has</strong> ~~Does he have / He have / I have~~ breakfast at eight.
+- When does he have breakfast? — <strong>He has</strong> ~~Does he have / He have / I have~~ breakfast at eight.
+- What time do you finish school? — <strong>I finish</strong> ~~Do I finish / I finishes / He finishes~~ school at three.
+- When do they have lunch at school? — <strong>They have</strong> ~~Do they have / They has / He has~~ lunch at one.
+- <strong>Does your brother</strong> ~~Your brother does / Do your brother / Does~~ do his homework in the evening? — No, he does not.
+- When do you go to bed on weekdays? — <strong>I go</strong> ~~Do I go / I goes / He goes~~ to bed at ten.
+- What time <strong>do you</strong> ~~you do / does you / do~~ go home on Fridays? — I go home at three.
+- <strong>Do they</strong> ~~They do / Does they / Do~~ do their homework in the evening? — No, they don't.
+- <strong>Why do you</strong> ~~You do / Why does you / do~~ get up early on Monday? — I get up early for school.
+- What time do you go home on Mondays? — <strong>I go</strong> ~~Do I go / I goes / He goes~~ home at four.
+- What time do you have a shower? — <strong>I have</strong> ~~Do I have / I has / He has~~ a shower at seven.
+- What time <strong>do you</strong> ~~you do / does you / do~~ have a shower? — I have a shower at seven.
+- What time <strong>do you</strong> ~~you do / does you / do~~ finish school? — I finish school at three.
+- When <strong>do they</strong> ~~they do / does they / do~~ have lunch at school? — They have lunch at one.
+- <strong>Where do you</strong> ~~You do / Where does you / do~~ eat lunch at school? — I eat lunch in the cafeteria.
+- When do you go to bed on weekdays? — <strong>I go</strong> ~~Do I go / I goes / He goes~~ to bed at nine.
+- What time does your friend finish school? — <strong>He finishes</strong> ~~Does he finish / He finish / I finish~~ at three.
+- What time do you go home on Fridays? — <strong>I go</strong> ~~Do I go / I goes / He goes~~ home at three.
+- What time <strong>do they</strong> ~~they do / does they / do~~ finish school? — They finish school at four.
+- What time do you brush your teeth? — <strong>I brush</strong> ~~Do I brush / I brushes / He brushes~~ my teeth at eight.
+- When <strong>do the students</strong> ~~the students do / does the students / do~~ have lunch at school? — They have lunch at twelve.
+- Does your brother do his homework in the evening? — No, <strong>he does not</strong> ~~he does / he do not / he do~~.
+- Does your sister do her homework in the evening? — Yes, <strong>she does</strong> ~~she doesn't / she do / she don't~~.
+- Why <strong>do you</strong> ~~you do / does you / do~~ get up early on Monday? — I get up early for school.
+- What time <strong>do you</strong> ~~you do / does you / do~~ brush your teeth? — I brush my teeth at eight.
+- <strong>Do you</strong> ~~You do / Does you / Do~~ have dinner with your family every evening? — Yes, I do.
+- What time does he brush his teeth? — <strong>He brushes</strong> ~~Does he brush / He brush / I brush~~ his teeth at seven.
+- Why do you get up early on Monday? — <strong>I get</strong> ~~Do I get / I gets / He gets~~ up early for school.
+- Why do you get up early on Monday? — <strong>I get</strong> ~~Do I get / I gets / He gets~~ up early for school.
+- Do they have dinner with your family every evening? — No, <strong>they don't</strong> ~~they do / they does / they doesn't~~.
+- Do you have dinner with your family every evening? — Yes, <strong>I do</strong> ~~I don't / I does / I doesn't~~.
+- What time does Lisa brush her teeth? — <strong>She brushes</strong> ~~Does she brush / She brush / I brush~~ her teeth at eight.
+- Where <strong>do you</strong> ~~you do / does you / do~~ eat lunch at school? — I eat lunch in the cafeteria.
+- What time <strong>does he</strong> ~~He does / Do he / Does~~ brush his teeth? — He brushes his teeth at seven.
+- Where do you eat lunch at school? — <strong>I eat</strong> ~~Do I eat / I eats / He eats~~ lunch in the cafeteria.
+- Where do you eat lunch at school? — <strong>I eat</strong> ~~Do I eat / I eats / He eats~~ lunch in the cafeteria.
+- What time <strong>does Lisa</strong> ~~Lisa does / do Lisa / does~~ brush her teeth? — She brushes her teeth at eight.
+- <strong>Do they</strong> ~~They do / Does they / Do~~ have dinner with your family every evening? — No, they don't.
+- When do the students have lunch at school? — <strong>They have</strong> ~~Do they have / They has / He has~~ lunch at twelve.</p>
+</blockquote>
+<h2 id="a2-past-continuous-positive">A2 · Past continuous (positive)</h2>
+<blockquote>
+<p>[!example]- Round 1 (53 questions)
+- The dog <strong>was sleeping</strong> ~~were sleeping~~ (sleep) by the sofa.
+- We <strong>were watching</strong> ~~was watching~~ (watch) a film last night.
+- They <strong>were taking</strong> ~~was taking~~ (take) photos in the park.
+- Lucy <strong>was reading</strong> ~~were reading~~ (read) a comic on the bus.
+- The girls <strong>were dancing</strong> ~~was dancing~~ (dance) at the party.
+- They <strong>were drawing</strong> ~~was drawing~~ (draw) trees on the board.
+- She <strong>was drawing</strong> ~~were drawing~~ (draw) a cat in her notebook.
+- Ben <strong>was riding</strong> ~~were riding~~ (ride) his bike after school.
+- The boys <strong>were swimming</strong> ~~was swimming~~ (swim) in the pool then.
+- They <strong>were playing</strong> ~~was playing~~ (play) basketball in the gym.
+- I <strong>was reading</strong> ~~were reading~~ (read) a book in bed last night.
+- Ben and Anna <strong>were playing</strong> ~~was playing~~ (play) computer games.
+- They <strong>were riding</strong> ~~was riding~~ (ride) their bikes in the park.
+- I <strong>was watching</strong> ~~were watching~~ (watch) a film at home last night.
+- They <strong>were reading</strong> ~~was reading~~ (read) comics in the classroom.
+- They <strong>were swimming</strong> ~~was swimming~~ (swim) in the lake on Saturday.
+- Dad <strong>was listening</strong> ~~were listening~~ (listen) to music in the kitchen.
+- He <strong>was watching</strong> ~~were watching~~ (watch) TV with his dad yesterday.
+- Mia <strong>was drawing</strong> ~~were drawing~~ (draw) a cat yesterday afternoon.
+- I <strong>was swimming</strong> ~~were swimming~~ (swim) in the school pool yesterday.
+- She <strong>was painting</strong> ~~were painting~~ (paint) flowers on a small canvas.
+- He <strong>was singing</strong> ~~were singing~~ (sing) in the music room yesterday.
+- We <strong>were skateboarding</strong> ~~was skateboarding~~ (skateboard) at the park on Sunday.
+- We <strong>were playing</strong> ~~was playing~~ (play) football on the school field.
+- Tom <strong>was playing</strong> ~~were playing~~ (play) computer games after school.
+- She <strong>was swimming</strong> ~~were swimming~~ (swim) in the pool with her friend.
+- We <strong>were singing</strong> ~~was singing~~ (sing) our favourite song on the bus.
+- We <strong>were watching</strong> ~~was watching~~ (watch) a cartoon in the living room.
+- She <strong>was playing</strong> ~~were playing~~ (play) basketball in the sports hall.
+- They <strong>were playing</strong> ~~was playing~~ (play) computer games in Ben's room.
+- They <strong>were painting</strong> ~~was painting~~ (paint) posters for the school play.
+- I <strong>was dancing</strong> ~~were dancing~~ (dance) to my favourite song in my room.
+- Hugo and Jack <strong>were playing</strong> ~~was playing~~ (play) football in the rain.
+- We <strong>were drawing</strong> ~~was drawing~~ (draw) pictures in art class yesterday.
+- I <strong>was painting</strong> ~~were painting~~ (paint) a picture of my house yesterday.
+- He <strong>was listening</strong> ~~were listening~~ (listen) to music while he was drawing.
+- They <strong>were skating</strong> ~~was skating~~ (skate) in the park yesterday evening.
+- He <strong>was</strong> ~~were~~ (be) playing football in the playground.
+- I <strong>was</strong> ~~were~~ (be) riding a bike to the park yesterday.
+- Lily <strong>was</strong> ~~were~~ (be) cooking a cake for the film night.
+- She <strong>was listening</strong> ~~were listening~~ (listen) to music in her room yesterday.
+- We <strong>were going</strong> ~~was going~~ (go) to the cinema on Saturday afternoon.
+- She <strong>was reading</strong> ~~were reading~~ (read) a comic in the library yesterday.
+- She <strong>was</strong> ~~were~~ (be) shopping for a new T-shirt in town.
+- You <strong>were watching</strong> ~~was watching~~ (watch) a film at the cinema last night.
+- I <strong>was</strong> ~~were~~ (be) riding my bike after school yesterday.
+- I <strong>was watching</strong> ~~were watching~~ (watch) TV with my little sister yesterday.
+- Daisy <strong>was</strong> ~~were~~ (be) dancing to loud music in her room.
+- Betty <strong>was taking</strong> ~~were taking~~ (take) photos of her cat for a project.
+- We <strong>were listening</strong> ~~was listening~~ (listen) to music on the bus after school.
+- They <strong>were dancing</strong> ~~was dancing~~ (dance) at the school disco last Friday.
+- We <strong>were listening</strong> ~~was listening~~ (listen) to music in the park with friends.
+- She <strong>was watching</strong> ~~were watching~~ (watch) a cartoon on TV yesterday evening.</p>
+<p>[!example]- Round 2 (54 questions)
+- He <strong>was</strong> ~~were~~ (be) watching a movie on his laptop in bed.
+- He <strong>was dancing</strong> ~~were dancing~~ (dance) with his sister in the living room.
+- Sally <strong>was taking</strong> ~~were taking~~ (take) photos of the sunset at the beach.
+- He <strong>was</strong> ~~were~~ (be) skating in the playground after school.
+- I <strong>was playing</strong> ~~were playing~~ (play) computer games on my tablet yesterday.
+- Sam <strong>was</strong> ~~were~~ (be) going to the cinema to watch a comedy.
+- Fred and Jack <strong>were</strong> ~~was~~ (be) dancing at the school party.
+- She <strong>was</strong> ~~were~~ (be) taking photos of her dog in the garden.
+- They <strong>were</strong> ~~was~~ (be) shopping for games and comics in town.
+- Sally <strong>was singing</strong> ~~were singing~~ (sing) and playing the guitar at the cafe.
+- Ann <strong>was</strong> ~~were~~ (be) texting a friend while she was waiting.
+- We <strong>were</strong> ~~was~~ (be) watching a film together on the big sofa.
+- We <strong>were playing</strong> ~~was playing~~ (play) tennis in the park yesterday afternoon.
+- He <strong>was</strong> ~~were~~ (be) playing tennis with his friend yesterday.
+- Mum <strong>was</strong> ~~were~~ (be) cooking dinner in the kitchen yesterday.
+- I <strong>was</strong> ~~were~~ (be) chatting online with my friend last night.
+- I <strong>was</strong> ~~were~~ (be) texting a friend during the boring TV show.
+- We <strong>were shopping</strong> ~~was shopping~~ (shop) for snacks at the supermarket yesterday.
+- Alex <strong>was</strong> ~~were~~ (be) riding a bike around the lake at sunset.
+- Anna and Ben <strong>were</strong> ~~was~~ (be) riding bikes in the countryside.
+- Zoe and Betty <strong>were</strong> ~~was~~ (be) swimming in the sea on holiday.
+- They <strong>were texting</strong> ~~was texting~~ (text) each other during the break at school.
+- He <strong>was</strong> ~~were~~ (be) skateboarding behind the school yesterday.
+- Mark <strong>was drawing</strong> ~~were drawing~~ (draw) superheroes in his sketchbook at home.
+- Dan <strong>was listening</strong> ~~were listening~~ (listen) to music on the bus yesterday morning.
+- We <strong>were</strong> ~~was~~ (be) going to the cinema because it was raining.
+- They <strong>were taking</strong> ~~was taking~~ (take) photos in the playground at break time.
+- Matt and May <strong>were</strong> ~~was~~ (be) going to the cinema after school.
+- Eva <strong>was listening</strong> ~~were listening~~ (listen) to music while she was doing homework.
+- Jane <strong>was</strong> ~~were~~ (be) dancing with her friends at the festival.
+- Jill <strong>was</strong> ~~were~~ (be) reading a book about football last night.
+- Frank <strong>was</strong> ~~were~~ (be) shopping for new headphones in the mall.
+- Ben <strong>was reading</strong> ~~were reading~~ (read) a book about animals yesterday afternoon.
+- Sue <strong>was</strong> ~~were~~ (be) playing basketball with her taller friends.
+- Sue <strong>was</strong> ~~were~~ (be) painting her bedroom walls a bright yellow.
+- Sam <strong>was</strong> ~~were~~ (be) painting a big blue mountain in the garden.
+- Alex and Alice <strong>were</strong> ~~was~~ (be) texting friends about the party.
+- Matt <strong>was</strong> ~~were~~ (be) drawing a picture of his family yesterday.
+- The friends <strong>were</strong> ~~was~~ (be) going to the cinema on Friday night.
+- Lily <strong>was</strong> ~~were~~ (be) singing her favorite song into a hairbrush.
+- Kim and Lucy <strong>were</strong> ~~was~~ (be) reading books together on the sofa.
+- She <strong>was</strong> ~~were~~ (be) riding her bike to school yesterday morning.
+- Pat and Sam <strong>were</strong> ~~was~~ (be) playing tennis on the school courts.
+- Tom <strong>was</strong> ~~were~~ (be) playing tennis while his sister was reading.
+- David <strong>was</strong> ~~were~~ (be) swimming slowly because he was very tired.
+- Sophia <strong>was</strong> ~~were~~ (be) skateboarding down the hill very quickly.
+- Paul and Peter <strong>were</strong> ~~was~~ (be) cooking snacks for their friends.
+- You <strong>were</strong> ~~was~~ (be) riding a bike with your sister after school.
+- They <strong>were</strong> ~~was~~ (be) watching TV in the hotel room after dinner.
+- Ben and Tom <strong>were</strong> ~~was~~ (be) playing computer games after school.
+- Holly and Katy <strong>were</strong> ~~was~~ (be) shopping for clothes after school.
+- George and Harry <strong>were</strong> ~~was~~ (be) shopping for a birthday present.
+- George <strong>was</strong> ~~were~~ (be) skating in the park on Saturday afternoon.
+- Sarah and Sophia <strong>were</strong> ~~was~~ (be) chatting online late last night.</p>
+<p>[!example]- Round 3 (53 questions)
+- Michael <strong>was</strong> ~~were~~ (be) chatting online with his cousin in Canada.
+- We <strong>were</strong> ~~was~~ (be) baking cookies for a party yesterday afternoon.
+- Harry and Helen <strong>were</strong> ~~was~~ (be) skating on the ice near the river.
+- May <strong>was</strong> ~~were~~ (be) drawing her favorite singer during the lesson.
+- The girls <strong>were</strong> ~~was~~ (be) playing tennis in the hot afternoon sun.
+- He <strong>was</strong> ~~were~~ (be) going to the cinema with his friends yesterday.
+- Peter <strong>was</strong> ~~were~~ (be) singing quietly while he was cooking dinner.
+- Vicky and Zoe <strong>were</strong> ~~was~~ (be) taking photos at the music festival.
+- Tom <strong>was</strong> ~~were~~ (be) painting a football stadium on a large canvas.
+- The team <strong>were</strong> ~~was~~ (be) playing football in front of a big crowd.
+- The students <strong>were</strong> ~~was~~ (be) dancing on stage for the talent show.
+- Helen <strong>was</strong> ~~were~~ (be) shopping for snacks before the film started.
+- The boys <strong>were</strong> ~~was~~ (be) skating around the square with loud music.
+- They <strong>were</strong> ~~was~~ (be) playing basketball in the park near our house.
+- Sophia and Emma <strong>were</strong> ~~was~~ (be) baking a cake for the school party.
+- Nick <strong>was</strong> ~~were~~ (be) playing tennis with his dad on Sunday morning.
+- Holly <strong>was</strong> ~~were~~ (be) skating carefully because the ground was wet.
+- Kim and Lucy <strong>were</strong> ~~was~~ (be) texting each other about the new film.
+- Mary and Paul <strong>were</strong> ~~was~~ (be) singing in the school choir yesterday.
+- Oliver and Richard <strong>were</strong> ~~was~~ (be) chatting online about a new game.
+- The artists <strong>were</strong> ~~was~~ (be) painting pictures of the city at sunset.
+- Sarah <strong>was</strong> ~~were~~ (be) baking cookies for the movie marathon at home.
+- The children <strong>were</strong> ~~was~~ (be) drawing animals and trees in art class.
+- Alice <strong>was</strong> ~~were~~ (be) playing computer games with her cousin online.
+- The children <strong>were baking</strong> ~~was baking~~ (bake) biscuits and laughing in the kitchen.
+- Jim and Julia <strong>were</strong> ~~was~~ (be) cooking pasta together in the kitchen.
+- Alex <strong>was</strong> ~~were~~ (be) playing computer games in his room all evening.
+- Jane <strong>was</strong> ~~were~~ (be) cooking dinner while she was listening to music.
+- She <strong>was</strong> ~~were~~ (be) watching TV while her brother was cooking dinner.
+- The teenagers <strong>were</strong> ~~was~~ (be) listening to music together last night.
+- Grace <strong>was</strong> ~~were~~ (be) playing football with her brothers in the yard.
+- Vicky <strong>was</strong> ~~were~~ (be) swimming in the hotel pool yesterday afternoon.
+- Matt and May <strong>were</strong> ~~was~~ (be) playing basketball after their homework.
+- Oliver <strong>was</strong> ~~were~~ (be) skateboarding in front of his house yesterday.
+- Mark <strong>was</strong> ~~were~~ (be) playing basketball at the sports hall yesterday.
+- Hugo <strong>was</strong> ~~were~~ (be) reading a comic on the train to school yesterday.
+- David and Emma <strong>were</strong> ~~was~~ (be) taking photos of their friends skating.
+- Mary <strong>was</strong> ~~were~~ (be) cooking soup while the children were watching TV.
+- Richard and Robert <strong>were</strong> ~~was~~ (be) skateboarding at the new skatepark.
+- Grace <strong>was</strong> ~~were~~ (be) reading a book in the garden yesterday afternoon.
+- William and Zoe <strong>were</strong> ~~was~~ (be) baking cupcakes for their gaming night.
+- We <strong>were</strong> ~~was~~ (be) playing tennis together during our holiday in Spain.
+- Emma and Frank <strong>were</strong> ~~was~~ (be) swimming at the sports center yesterday.
+- We <strong>were</strong> ~~was~~ (be) chatting online in English with our foreign friends.
+- The boys <strong>were</strong> ~~was~~ (be) playing basketball behind the school building.
+- Lucy <strong>was</strong> ~~were~~ (be) playing football with her classmates after school.
+- Robert <strong>was</strong> ~~were~~ (be) chatting online while he was listening to music.
+- Betty <strong>was</strong> ~~were~~ (be) baking bread while she was listening to the radio.
+- The children <strong>were</strong> ~~was~~ (be) riding their bikes outside the school gate.
+- The students <strong>were</strong> ~~was~~ (be) texting friends instead of reading the book.
+- Katy and Michael <strong>were</strong> ~~was~~ (be) skating together outside the shopping mall.
+- The tourists <strong>were</strong> ~~was~~ (be) taking photos in front of the cinema yesterday.
+- Charlie and Clare <strong>were</strong> ~~was~~ (be) painting together at the community center.</p>
+</blockquote>
+<h2 id="a2-connecting-words-because-so">A2 · Connecting words (because – so)</h2>
+<blockquote>
+<p>[!example]- Round 1 (53 questions)
+- I was late <strong>so</strong> ~~because~~ I ran to class.
+- I ran to class <strong>because</strong> ~~so~~ I was late.
+- I stayed at home <strong>because</strong> ~~so~~ I was ill.
+- We were hungry <strong>so</strong> ~~because~~ we ate pizza.
+- I was lost <strong>so</strong> ~~because~~ I asked for help.
+- I was happy <strong>because</strong> ~~so~~ my friends came.
+- We ate pizza <strong>because</strong> ~~so~~ we were hungry.
+- Zoe won <strong>because</strong> ~~so~~ she practiced a lot.
+- I wore a jacket <strong>because</strong> ~~so~~ it was cold.
+- I drank water <strong>because</strong> ~~so~~ I was thirsty.
+- It was cold <strong>so</strong> ~~because~~ we played inside.
+- I thanked Lucy <strong>because</strong> ~~so~~ she helped me.
+- We played inside <strong>because</strong> ~~so~~ it was cold.
+- Tom wore a jacket <strong>because</strong> ~~so~~ it was cold.
+- Sam was ill <strong>so</strong> ~~because~~ he stayed at home.
+- Sam stayed at home <strong>because</strong> ~~so~~ he was ill.
+- I walked home <strong>because</strong> ~~so~~ I missed the bus.
+- We played outside <strong>because</strong> ~~so~~ it was sunny.
+- We laughed <strong>because</strong> ~~so~~ the movie was funny.
+- I waited <strong>because</strong> ~~so~~ the soup was very hot.
+- The soup was very hot <strong>so</strong> ~~because~~ I waited.
+- I missed the bus <strong>so</strong> ~~because~~ I walked home.
+- It was sunny <strong>so</strong> ~~because~~ we played outside.
+- We ordered soup <strong>because</strong> ~~so~~ we were hungry.
+- We laughed <strong>because</strong> ~~so~~ the games were funny.
+- We bought juice <strong>because</strong> ~~so~~ we were thirsty.
+- Lisa was sick <strong>so</strong> ~~because~~ she stayed in bed.
+- Lisa stayed in bed <strong>because</strong> ~~so~~ she was sick.
+- We were thirsty <strong>so</strong> ~~because~~ we bought juice.
+- The room was messy <strong>so</strong> ~~because~~ I cleaned it.
+- My cat ate a fish <strong>because</strong> ~~so~~ it was hungry.
+- My cat was hungry <strong>so</strong> ~~because~~ it ate a fish.
+- I was tired <strong>because</strong> ~~so~~ I didn't sleep well.
+- I cleaned the room <strong>because</strong> ~~so~~ it was messy.
+- I felt safe <strong>because</strong> ~~so~~ the teacher was kind.
+- We cleaned the room <strong>because</strong> ~~so~~ it was messy.
+- Emma was thirsty <strong>so</strong> ~~because~~ she drank water.
+- Tom ate a sandwich <strong>because</strong> ~~so~~ he was hungry.
+- We went swimming <strong>because</strong> ~~so~~ it was very hot.
+- David was lost <strong>so</strong> ~~because~~ he called his mum.
+- The teacher was kind <strong>so</strong> ~~because~~ I felt safe.
+- Tom was hungry <strong>so</strong> ~~because~~ he ate a sandwich.
+- I took a taxi <strong>because</strong> ~~so~~ I missed the train.
+- The bus was late <strong>so</strong> ~~because~~ we arrived late.
+- It was very hot <strong>so</strong> ~~because~~ we went swimming.
+- Emma drank water <strong>because</strong> ~~so~~ she was thirsty.
+- The baby cried <strong>because</strong> ~~so~~ the music was loud.
+- We drank water <strong>because</strong> ~~so~~ there was no juice.
+- Mia stayed at home <strong>because</strong> ~~so~~ it was raining.
+- There was no juice <strong>so</strong> ~~because~~ we drank water.
+- David was scared <strong>so</strong> ~~because~~ he called his mum.
+- It was dark <strong>so</strong> ~~because~~ we turned on the light.
+- It was raining, <strong>so</strong> ~~because~~ Mia stayed at home.</p>
+<p>[!example]- Round 2 (54 questions)
+- My dog ate some food <strong>because</strong> ~~so~~ it was hungry.
+- We turned on the light <strong>because</strong> ~~so~~ it was dark.
+- We closed the windows <strong>because</strong> ~~so~~ it was windy.
+- The music was loud, <strong>so</strong> ~~because~~ the baby cried.
+- David called his mum <strong>because</strong> ~~so~~ he was scared.
+- Tom missed the bus <strong>because</strong> ~~so~~ he woke up late.
+- They arrived late <strong>because</strong> ~~so~~ the bus was late.
+- Leo was tired <strong>because</strong> ~~so~~ he didn't sleep well.
+- We were quiet <strong>so</strong> ~~because~~ the baby could sleep.
+- The park was wet <strong>so</strong> ~~because~~ we played at home.
+- The baby could sleep <strong>because</strong> ~~so~~ we were quiet.
+- The lights went out <strong>so</strong> ~~because~~ we used candles.
+- I didn't eat my soup <strong>because</strong> ~~so~~ it was too hot.
+- Ben practiced a lot <strong>so</strong> ~~because~~ he won the game.
+- The baby was sleeping <strong>so</strong> ~~because~~ we were quiet.
+- Ben won the game <strong>because</strong> ~~so~~ he practiced a lot.
+- The music was loud <strong>so</strong> ~~because~~ we couldn't talk.
+- Mia was tired <strong>because</strong> ~~so~~ she didn't sleep well.
+- We played cards <strong>because</strong> ~~so~~ the film was boring.
+- I thanked my friends <strong>because</strong> ~~so~~ they helped me.
+- They helped me <strong>so</strong> ~~because~~ I thanked my friends.
+- We were quiet <strong>because</strong> ~~so~~ the baby was sleeping.
+- We couldn't talk <strong>because</strong> ~~so~~ the music was loud.
+- I didn't go to school <strong>because</strong> ~~so~~ I had a fever.
+- We started early <strong>because</strong> ~~so~~ we had a lot to do.
+- We used candles <strong>because</strong> ~~so~~ the lights went out.
+- The game was boring <strong>so</strong> ~~because~~ we played cards.
+- Emma wore a coat <strong>because</strong> ~~so~~ it was cold outside.
+- The movie was funny <strong>so</strong> ~~because~~ we laughed a lot.
+- We laughed a lot <strong>because</strong> ~~so~~ the movie was funny.
+- We sang songs <strong>because</strong> ~~so~~ it was a birthday party.
+- Lisa cancelled her plans <strong>because</strong> ~~so~~ she was sick.
+- The weather was bad <strong>so</strong> ~~because~~ we stayed at home.
+- It was Sue's birthday <strong>so</strong> ~~because~~ we baked a cake.
+- My dog was hungry <strong>so</strong> ~~because~~ I gave it some food.
+- The quiz was easy <strong>so</strong> ~~because~~ we finished quickly.
+- We cut thin slices <strong>because</strong> ~~so~~ the cake was small.
+- I forgot my ticket <strong>so</strong> ~~because~~ I called my friend.
+- The cake was small <strong>so</strong> ~~because~~ we cut thin slices.
+- We finished quickly <strong>because</strong> ~~so~~ the quiz was easy.
+- Lily was tired, <strong>so</strong> ~~because~~ she went to bed early.
+- We baked a cake <strong>because</strong> ~~so~~ it was Sue's birthday.
+- Eva was nervous <strong>because</strong> ~~so~~ the teacher was angry.
+- Anna went home early <strong>because</strong> ~~so~~ she had homework.
+- It was late <strong>so</strong> ~~because~~ the children went to sleep.
+- Jack did well in the test <strong>so</strong> ~~because~~ he was happy.
+- The children went to sleep <strong>because</strong> ~~so~~ it was late.
+- We waited for the next bus <strong>because</strong> ~~so~~ it was full.
+- There were no tickets <strong>so</strong> ~~because~~ we stayed at home.
+- My dog didn't eat all day <strong>so</strong> ~~because~~ it was hungry.
+- It was very windy <strong>so</strong> ~~because~~ we closed the windows.
+- The team won the match <strong>because</strong> ~~so~~ they worked hard.
+- My sister loves art <strong>so</strong> ~~because~~ she draws every day.
+- The team worked hard <strong>so</strong> ~~because~~ they won the match.</p>
+<p>[!example]- Round 3 (53 questions)
+- It was raining <strong>so</strong> ~~because~~ we had the picnic inside.
+- We had the picnic inside <strong>because</strong> ~~so~~ it was raining.
+- My sister draws every day <strong>because</strong> ~~so~~ she loves art.
+- I was nervous <strong>because</strong> ~~so~~ I didn't know anyone there.
+- The music was quiet <strong>so</strong> ~~because~~ the baby could sleep.
+- The game was fun <strong>so</strong> ~~because~~ everyone wanted to play.
+- The room was full <strong>so</strong> ~~because~~ we couldn't find seats.
+- Dad took an umbrella <strong>because</strong> ~~so~~ it looked like rain.
+- Nobody wanted to leave <strong>because</strong> ~~so~~ the party was fun.
+- Everyone wanted to play <strong>because</strong> ~~so~~ the game was fun.
+- The party was fun <strong>so</strong> ~~because~~ nobody wanted to leave.
+- We couldn't find seats <strong>because</strong> ~~so~~ the room was full.
+- The baby could sleep <strong>because</strong> ~~so~~ the music was quiet.
+- It was too cold outside <strong>so</strong> ~~because~~ we played at home.
+- I didn't finish it <strong>because</strong> ~~so~~ the cake was too sweet.
+- It was snowing <strong>so</strong> ~~because~~ the children stayed inside.
+- We played at home <strong>because</strong> ~~so~~ it was too cold outside.
+- The children stayed inside <strong>because</strong> ~~so~~ it was snowing.
+- The cake was too sweet <strong>so</strong> ~~because~~ I didn't finish it.
+- Some people went home <strong>because</strong> ~~so~~ the party was boring.
+- Jack studied a lot <strong>so</strong> ~~because~~ he did well in the test.
+- We cut thin slices <strong>because</strong> ~~so~~ the cake was very small.
+- Jack did well in the test <strong>because</strong> ~~so~~ he studied a lot.
+- He couldn't get in <strong>because</strong> ~~so~~ my brother lost his key.
+- My brother lost his key <strong>so</strong> ~~because~~ he couldn't get in.
+- The party was boring <strong>so</strong> ~~because~~ some people went home.
+- Tom was very happy <strong>because</strong> ~~so~~ it was a surprise party.
+- It was a surprise party <strong>so</strong> ~~because~~ Tom was very happy.
+- I couldn't call you <strong>because</strong> ~~so~~ my phone had no battery.
+- I had a second piece <strong>because</strong> ~~so~~ the cake was delicious.
+- The cake was delicious <strong>so</strong> ~~because~~ I had a second piece.
+- The bus was full <strong>so</strong> ~~because~~ we waited for the next one.
+- Anna didn't go to the party <strong>because</strong> ~~so~~ she had an exam.
+- I brought my camera <strong>because</strong> ~~so~~ I wanted to take photos.
+- Lucy bought a present <strong>because</strong> ~~so~~ it was Tom's birthday.
+- Anna had an exam <strong>so</strong> ~~because~~ she didn't go to the party.
+- My phone had no battery <strong>so</strong> ~~because~~ I couldn't call you.
+- Sam forgot his invitation, <strong>so</strong> ~~because~~ he went back home.
+- It was our last day of school <strong>so</strong> ~~because~~ we had a party.
+- Eva forgot her homework <strong>so</strong> ~~because~~ the teacher was angry.
+- The teacher was angry <strong>because</strong> ~~so~~ Eva forgot her homework.
+- The quiz was hard <strong>so</strong> ~~because~~ we asked the teacher for help.
+- We asked the teacher for help <strong>because</strong> ~~so~~ the quiz was hard.
+- Olivia was happy <strong>because</strong> ~~so~~ she had a great day at the park.
+- We moved to a bigger room <strong>because</strong> ~~so~~ the room was too small.
+- The room was too small <strong>so</strong> ~~because~~ we moved to a bigger room.
+- We invited the neighbours <strong>because</strong> ~~so~~ we wanted to be friendly.
+- Jack studied a lot <strong>because</strong> ~~so~~ he wanted to do well in the test.
+- The park was full of people <strong>so</strong> ~~because~~ we went to another place.
+- We went to another place <strong>because</strong> ~~so~~ the park was full of people.
+- Eva didn't understand the question <strong>so</strong> ~~because~~ she asked for help.
+- The boy and the girl were hungry, <strong>so</strong> ~~because~~ they made sandwiches.
+- The room was too small <strong>so</strong> ~~because~~ they had to move to a bigger room.</p>
+</blockquote><div class="pager"><a href="./modes-and-settings.html">← Modes and Settings</a><a href="./fish-index.html">Fish Index →</a></div></main></div></body></html>
