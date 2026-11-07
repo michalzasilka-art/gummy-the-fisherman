@@ -5,6 +5,14 @@ Only changes to Gummy the Fisherman count here. Changes to the rest of fugio.co 
 - **Up to v18**, each version is one day on which the Production game (fugio.co/fish) was published with changes. The list was rebuilt from the project's change log and the Vercel deploy history.
 - **From v19 on**, every publish of the Gummy game gets the next number.
 
+## v19 – 7 Nov 2026 · New phone version with Foxino
+- The phone version (fugio.co/gummy-fisherman-mobile, folder `gummy-fisherman-mobile/`) was remade from scratch as a solo student game for 9:16 phones and tablets (portrait and landscape). It is now in this repository too.
+- Foxino is the fisherman. 12 new ChatGPT pictures: Foxino fishing at Glimmerwater Lake, Frostfall Lake and Sapphire Sea (day, sunset and night), the menu, and cheering / junk poses.
+- The places, fish (125), junk, descriptions, catch bar, kilos and points come from the Production game.
+- A game is 3 rounds: 4 questions first (each answer shows how much the fish and the net grow), then the catch bar, then the catch. One score at the weigh-in; Frostfall opens at 1,200 points at Glimmerwater, Sapphire at 1,500 at Frostfall. Own Fish Index. No shop or money.
+- Production's Phone mode still works: `?join=` links go to the old phone client, kept unchanged as `client.html`.
+- Production (fugio.co/fish) did not change.
+
 ## v18 – 6 Nov 2026 · Catch bar
 - After every round each player gets one try at the catch bar: tap CATCH! while the fish swims through the net. Better and faster answers make the net wider.
 - Points at the end: 100 for every kilo of fish, plus up to 50 for every fast right answer.
