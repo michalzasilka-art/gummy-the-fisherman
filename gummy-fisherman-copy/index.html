@@ -1450,9 +1450,9 @@
   .mg-post,.mg-fi{display:none}
   .mg-fl svg{display:block;width:100%;height:100%;filter:drop-shadow(0 .4vh .5vh rgba(0,0,0,.35));animation:mgbob .45s ease-in-out infinite alternate}
   @keyframes mgbob{from{transform:translateY(-.35vh) rotate(-3deg)}to{transform:translateY(.35vh) rotate(3deg)}}
-  .mg-fish.got .mg-fl svg{animation:mggot .7s cubic-bezier(.2,.8,.3,1)}
+  .mg-fish.got .mg-fl svg,.mg-fish.flee .mg-fl svg{animation:none}   /* (stays exactly where it was caught) */
   @keyframes mggot{30%{transform:translateY(-1.6vh) rotate(-14deg) scale(1.18)}100%{transform:none}}
-  .mg-fish.flee{animation:mgflee .55s ease-in forwards} .mg-fish.flee.l{animation-name:mgfleel}
+  .mg-fish.flee{animation:mgflee .45s ease-in .25s forwards} .mg-fish.flee.l{animation-name:mgfleel}
   @keyframes mgflee{to{opacity:0;transform:translateX(7vh)}} @keyframes mgfleel{to{opacity:0;transform:translateX(-7vh)}}
   .mg-say{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(.6);font:400 5.6vh/1 "Lilita One",Nunito,sans-serif;letter-spacing:.04em;opacity:0;pointer-events:none;white-space:nowrap;text-shadow:0 .4vh 0 rgba(0,0,0,.4),0 0 22px rgba(0,0,0,.45)}
   .mg-say.ok{color:#a6ffc9} .mg-say.no{color:#ffb0b0}
@@ -1514,7 +1514,7 @@
   .mg[data-mgloc] .mg-fish{width:calc(var(--mg-u)*8.4);height:calc(var(--mg-u)*6.4);margin:calc(var(--mg-u)*-3.2) 0 0 calc(var(--mg-u)*-4.2)}
   .mg[data-mgloc] .mg-fl svg{display:none}
   .mg[data-mgloc] .mg-fi{display:block;width:100%;height:100%;background:var(--mg-fish) center/contain no-repeat;filter:drop-shadow(0 .4vh .5vh rgba(0,0,0,.35));animation:mgbob .45s ease-in-out infinite alternate}
-  .mg[data-mgloc] .mg-fish.got .mg-fi{animation:mggot .7s cubic-bezier(.2,.8,.3,1)}
+  .mg[data-mgloc] .mg-fish.got .mg-fi,.mg[data-mgloc] .mg-fish.flee .mg-fi{animation:none}
   .mg-demo[data-mgloc]{--mg-u:1cqw;--mg-h:12cqw}
   /* round CATCH! button: the place's ring around a dome in the player's colour (grey while waiting, green / red once tried) */
   .players[data-mgloc] .pcatch,.mg-demo[data-mgloc] .mg-go{--d:var(--dome,var(--ring));border:0;border-radius:50%;box-shadow:none;color:#fff;paint-order:stroke fill;
@@ -4763,13 +4763,14 @@ function mgBar(box, o) {
   const side = Math.random() < .5 ? 0 : 1; // it starts at the left or at the right end
   const posAt = (ms) => { const u = (ms / o.cross + side) % 2; return [u < 1 ? u : 2 - u, u >= 1]; };
   const inNet = (x) => x >= o.at - MG.GRACE && x <= o.at + o.net + MG.GRACE;
-  const draw = ([x, back]) => { fish.style.left = (x * 100).toFixed(3) + '%'; fish.classList.toggle('l', back); netEl.classList.toggle('in', inNet(x)); };
+  let shown = posAt(0); // where the fish is on screen right now
+  const draw = ([x, back]) => { shown = [x, back]; fish.style.left = (x * 100).toFixed(3) + '%'; fish.classList.toggle('l', back); netEl.classList.toggle('in', inNet(x)); };
   let swim = 0, left = o.time || 0, prev = performance.now(), raf = 0, done = null, lastSec = 99;
   const ready = prev + (o.ready || 0);
   const promise = new Promise((res) => { done = res; });
   const end = (r) => { if (!done) return; const d = done; done = null; cancelAnimationFrame(raf); d(r); };
-  const result = (ms, late) => {
-    const at = posAt(ms), hit = !late && inNet(at[0]);
+  const result = (ms, late, at = posAt(ms)) => {
+    const hit = !late && inNet(at[0]);
     draw(at); netEl.classList.toggle('in', hit);
     fish.classList.add(hit ? 'got' : 'flee');
     say.textContent = hit ? 'CAUGHT!' : late ? "TIME'S UP!" : 'MISSED!';
@@ -4794,13 +4795,12 @@ function mgBar(box, o) {
     raf = requestAnimationFrame(frame);
   };
   raf = requestAnimationFrame(frame);
-  // a tap counts where the fish was at the moment of the touch, not at the next frame. At most 50 ms from the fish on
-  // screen, so on a slow computer (few frames a second) it still counts where the player saw the fish
-  const tap = (e) => {
+  // (2026-11-13, the user: "when I click CATCH it misplaces it, I want it steady") a tap stops the fish exactly where it is on
+  // screen and judges that spot: no re-timing, so the fish never jumps when you tap
+  const tap = () => {
     const now = performance.now();
     if (!done || now < ready || (o.hold && o.hold())) return;
-    const ts = e && e.timeStamp > 0 && Math.abs(e.timeStamp - now) < 300 ? e.timeStamp : now;
-    result(Math.max(0, swim + clamp(ts - prev, -50, 50)));
+    result(swim, false, shown);
   };
   return {promise, tap};
 }
@@ -4863,7 +4863,7 @@ async function catchBar(lv) {
     hits.push(hit);
     dots[pi].classList.remove('now'); dots[pi].classList.add(hit ? 'ok' : 'no');
     if (btn) { btn.className = 'pcatch h ' + (hit ? 'ok' : 'no'); btn.disabled = true; btn.innerHTML = hit ? '&#10003; In the net' : '&#10007; Missed'; }
-    if (hit) { sfx.net(); confetti(el.querySelector('.mg-fish').getBoundingClientRect(), p.ring); } else sfx.wrong();
+    if (hit) { sfx.net(); confetti(el.querySelector('.mg-fish').getBoundingClientRect(), p.ring); if (btn) confetti(btn.getBoundingClientRect(), p.ring); } else sfx.wrong();   // (the same burst as a right answer, from the fish and the CATCH! button)
     if (FIGHT.on) fight(hit); else setMood(hit ? 'reel' : 'tug'); // Gummy fights the fish / gets dragged
     await wait(MG.AFTER);
     if (G !== me) { close(); return null; }
@@ -4885,6 +4885,7 @@ async function catchBar(lv) {
   return hits;
 }
 
+window.__gummyMg = {mgBar, mgHtml, mgTheme, confetti}; // (test hook: the catch bar on its own)
 // POINTS: one scale for every mode, shown next to the kilos. A fish is worth 100 points a kilo (junk 0); in Team / 6p the
 // team's fish is shared equally by the players who got it into the net (a player who missed gets none of it, only their
 // speed points). Every right answer adds up to 50 more for speed (instant 50 … at the buzzer 0).

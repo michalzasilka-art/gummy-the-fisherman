@@ -5,6 +5,10 @@ Only changes to Gummy the Fisherman count here. Changes to the rest of fugio.co 
 - **Up to v18**, each version is one day on which the Production game (fugio.co/fish) was published with changes. The list was rebuilt from the project's change log and the Vercel deploy history.
 - **From v19 on**, every publish of the Gummy game gets the next number.
 
+## v21 – 13 Nov 2026 · Steady catch bar, confetti on a catch
+- Tapping CATCH! stops the fish exactly where it is on screen, and that spot decides the catch. Before, the game re-worked out the fish's position for the moment of the tap (up to 50 ms of swimming), so the fish jumped. A caught fish also used to jump and spin; now it stays still. A missed fish waits a moment before it swims off.
+- A catch bursts the same confetti as a right answer, from the fish and from the player's CATCH! button.
+
 ## v20 – 13 Nov 2026 · Lobby icons for each place, faster catch bar
 - The How to play and Fish Index buttons next to Start fishing have new painted icons (made in ChatGPT), one pair per place. How to play is always a little book and the Fish Index always a fish: a bobber and a jumping lake fish at Glimmerwater Lake, a snowflake and a frosty fish at Frostfall Lake, a lighthouse and an angelfish at Sapphire Sea. They are in `gummy-fisherman-copy/art/icons/`; the old line drawings stay as a fallback.
 - The catch bar after each round is much quicker. Before it opens: 0.12 s (was 0.45 s). Before each fish starts: 0.2 s (was 0.7 s). After each try: 0.5 s (was 1.2 s), with the same confetti as a right answer. The summary: 0.9 s (was 1.9 s). The fish's speed and the time to tap did not change.
