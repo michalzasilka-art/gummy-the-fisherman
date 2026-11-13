@@ -928,6 +928,7 @@
   @media (min-width:1000px){.startrow{gap:1.6vh;margin:3vh auto 1.6vh}#lobby .link.iconbtn{padding:.6vh;border-radius:2.3vh}#lobby .link.iconbtn .lico{border-radius:1.7vh}#lobby .link.iconbtn .lico svg{width:3.8vh;height:3.8vh}}
   .lico{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:color-mix(in srgb,var(--ic) 22%,transparent);border:1.5px solid var(--ic);color:var(--ic);flex:none}
   .lico svg{width:26px;height:26px}
+  .lico .lico-pic{width:88%;height:88%;object-fit:contain;filter:drop-shadow(0 2px 3px rgba(0,0,0,.35));pointer-events:none}
   /* How to play (showHow): annotated screenshots, coloured by location (--ac frame, --ac2 dark edge, --ring marks, --bg panel) */
   .howto{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:clamp(10px,2vh,24px);overflow:auto;
     background:color-mix(in srgb,var(--bg) 80%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);animation:ht-fade .25s ease both}
@@ -3240,10 +3241,16 @@ const LOC_ICONS = {
   sea: {how: ['#ffd36b', ICO('<path d="M9.6 9.2h4.8l1.3 10.8H8.3z"/><path d="M9.2 9.2V6.4h5.6v2.8"/><path d="M8.6 6.4 12 3.4l3.4 3"/><path d="M9 13.6h6M8.6 17h6.8"/><path d="M3.8 5.4l2.9.9M3.8 9.2l2.9-.8M20.2 5.4l-2.9.9M20.2 9.2l-2.9-.8"/><path d="M5 20.5h14"/>')],
     index: ['#5ff0d8', ICO('<path d="M3.5 12c2.5-3.6 5.6-6.4 9-8.4.5 2.6.6 4.9.5 6.8L18.5 7v10L13 13.6c.1 1.9 0 4.2-.5 6.8-3.4-2-6.5-4.8-9-8.4z"/><circle cx="7.6" cy="11" r="1.1" fill="currentColor" stroke="none"/><path d="M10.3 7.6c1 2.9 1 5.9 0 8.8"/><circle cx="20.6" cy="3.6" r="1.3" stroke-width="1.6"/><circle cx="21" cy="8" r=".8" stroke-width="1.4"/>')]},
 };
+// (2026-11-13, the user: "make the icons for the Fish Index and How to play with ChatGPT, simple and related to each
+// location") painted icons, one pair per location (art/icons/<how|index>-<place>.webp); the line drawings stay as a fallback
+const LOC_PICS = { lake: 'lake', mountain: 'frostfall', sea: 'sapphire' };
 function renderLocIcons(l, pop) {
   const set = LOC_ICONS[l.id]; if (!set) return;
-  [['howIco', set.how], ['indexIco', set.index]].forEach(([id, [c, svg]]) => {
-    const el = $(id); el.style.setProperty('--ic', c); el.innerHTML = svg;
+  [['howIco', set.how, 'how'], ['indexIco', set.index, 'index']].forEach(([id, [c, svg], kind]) => {
+    const el = $(id); el.style.setProperty('--ic', c);
+    const pic = LOC_PICS[l.id] && `art/icons/${kind}-${LOC_PICS[l.id]}.webp?v=1`;
+    el.innerHTML = pic ? `<img class="lico-pic" src="${pic}" alt="" draggable="false">` : svg;
+    if (pic) el.querySelector('img').onerror = function () { el.innerHTML = svg; };
     if (pop) { el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop'); }
   });
 }
@@ -4716,7 +4723,9 @@ function sixPull(lv, gold) {
 // Phone mode has no catch bar (the players are not at the board): there every answer wrong = junk, as before.
 // CROSS = seconds the fish needs from one end to the other in rounds 1, 2, 3 and the bonus round; TIME = seconds to tap;
 // GRACE = how far (share of the bar) the middle of the fish may be outside the net and still count; READY = ms it waits first.
-const MG = {NET: [.09, .34], CROSS: [1.35, 1.2, 1.05, .95], TIME: 10, GRACE: .012, READY: 700};
+// (2026-11-13, the user: "make the mini game after each question faster, no additional delay, the confetti as on a normal answer")
+// the pauses round the catch bar are cut: READY 700 -> 200 ms, after each try 1200 -> 500 ms, the summary 1900 -> 900 ms
+const MG = {NET: [.09, .34], CROSS: [1.35, 1.2, 1.05, .95], TIME: 10, GRACE: .012, READY: 200, AFTER: 500, SUM: 900};
 const netFor = (p, lv) => MG.NET[0] + (MG.NET[1] - MG.NET[0]) * roundScore(p, lv) / 10;
 const netMult = (hits, n) => .5 + hits / n;
 const netWord = (s) => (s >= 9 ? 'a huge net' : s >= 6 ? 'a big net' : s >= 3 ? 'a small net' : 'a tiny net');
@@ -4802,7 +4811,7 @@ async function catchBar(lv) {
   const me = G, ps = G.players, team = G.play !== 'solo';
   document.querySelectorAll('.pcard.active').forEach((c) => c.classList.remove('active'));
   $('players').style.removeProperty('--cols'); // the last player's card was widened for their question: all cards the same again
-  await wait(450); // the last answer's cheer first
+  await wait(120); // (the last answer's cheer has already played)
   if (G !== me) return null;
   const el = document.createElement('div'); el.className = 'mg';
   mgTheme(el, G.loc.id); mgTheme($('players'), G.loc.id); // this place's bar, net, fish and buttons
@@ -4831,7 +4840,7 @@ async function catchBar(lv) {
   const close = async (fade) => {
     removeEventListener('resize', place); removeEventListener('keydown', onKey); box.removeEventListener('pointerdown', onDown);
     document.querySelectorAll('.pcard.mg-on').forEach((c) => c.classList.remove('mg-on'));
-    if (fade) { el.classList.add('out'); await wait(300); }
+    if (fade) { el.classList.add('out'); await wait(180); }
     el.remove();
   };
   const dots = el.querySelectorAll('.mg-team i'), hits = [];
@@ -4856,7 +4865,7 @@ async function catchBar(lv) {
     if (btn) { btn.className = 'pcatch h ' + (hit ? 'ok' : 'no'); btn.disabled = true; btn.innerHTML = hit ? '&#10003; In the net' : '&#10007; Missed'; }
     if (hit) { sfx.net(); confetti(el.querySelector('.mg-fish').getBoundingClientRect(), p.ring); } else sfx.wrong();
     if (FIGHT.on) fight(hit); else setMood(hit ? 'reel' : 'tug'); // Gummy fights the fish / gets dragged
-    await wait(1200);
+    await wait(MG.AFTER);
     if (G !== me) { close(); return null; }
   }
   // how it went for everyone
@@ -4870,7 +4879,7 @@ async function catchBar(lv) {
   ps.forEach((_, k) => $('pc' + k)?.classList.remove('mg-on'));
   setStatus(el.querySelector('.mg-nm').textContent);
   if (team && n) sfx.coin();
-  await wait(1900);
+  await wait(MG.SUM);
   if (G !== me) { close(); return null; }
   await close(true);
   return hits;
