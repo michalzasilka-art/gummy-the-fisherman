@@ -5,6 +5,9 @@ Only changes to Gummy the Fisherman count here. Changes to the rest of fugio.co 
 - **Up to v18**, each version is one day on which the Production game (fugio.co/fish) was published with changes. The list was rebuilt from the project's change log and the Vercel deploy history.
 - **From v19 on**, every publish of the Gummy game gets the next number.
 
+## v22 (2026-11-15)
+- The CATCH! button no longer jumps up and to the left for a moment after you tap it: it pops in place (its own `pcsay` animation; `mgsay` moves things by -50%/-50% for the centred pop-up text).
+
 ## v21 – 13 Nov 2026 · Steady catch bar, confetti on a catch
 - Tapping CATCH! stops the fish exactly where it is on screen, and that spot decides the catch. Before, the game re-worked out the fish's position for the moment of the tap (up to 50 ms of swimming), so the fish jumped. A caught fish also used to jump and spin; now it stays still. A missed fish waits a moment before it swims off.
 - A catch bursts the same confetti as a right answer, from the fish and from the player's CATCH! button.

@@ -1483,7 +1483,9 @@
   .pcatch.on:active{transform:translateY(.5vh);box-shadow:0 .2vh 0 color-mix(in srgb,var(--ring) 50%,#000),0 4px 12px rgba(0,0,0,.35);animation:none}
   @keyframes pcpulse{50%{transform:scale(1.035);filter:brightness(1.1)}}
   .pcatch.wait{background:rgba(8,18,36,.3);color:rgba(255,255,255,.55);box-shadow:none;border:2px dashed rgba(255,255,255,.3);font-size:min(3vh,2.2vw)}
-  .pcatch.ok,.pcatch.no{box-shadow:none;font-size:min(3.2vh,2.2vw);animation:mgsay .4s cubic-bezier(.2,.8,.3,1)}
+  .pcatch.ok,.pcatch.no{box-shadow:none;font-size:min(3.2vh,2.2vw);animation:pcsay .35s cubic-bezier(.2,.8,.3,1)}
+  /* (the user: the button jumped away for a moment) its own pop, in place: mgsay moves things by -50%/-50% for the centred pop-up text */
+  @keyframes pcsay{0%{transform:scale(.9)}60%{transform:scale(1.05)}100%{transform:scale(1)}}
   .pcatch.ok{background:rgba(53,208,127,.22);color:#a6ffc9;border:2px solid #35d07f}
   .pcatch.no{background:rgba(229,72,77,.2);color:#ffb0b0;border:2px solid #ff5d6c}
   @media (min-width:1000px){.players.mg-mode .pcard .phead{margin-bottom:1.4vh}}
