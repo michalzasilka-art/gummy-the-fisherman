@@ -5,6 +5,9 @@ Only changes to Gummy the Fisherman count here. Changes to the rest of fugio.co 
 - **Up to v18**, each version is one day on which the Production game (fugio.co/fish) was published with changes. The list was rebuilt from the project's change log and the Vercel deploy history.
 - **From v19 on**, every publish of the Gummy game gets the next number.
 
+## v23 (2026-11-25)
+- The phone version (gummy-fisherman-mobile) plays the English chosen in the fugio.co Student library: a level (A0 / A1 / A2, every package of it) or specific packages. `shared/content.js`, loaded right after `packages.js`, narrows the packages to that choice (the address carries `?lv=A1` or `?pk=…`). Opened on its own, nothing changes.
+
 ## v22 (2026-11-15)
 - The CATCH! button no longer jumps up and to the left for a moment after you tap it: it pops in place (its own `pcsay` animation; `mgsay` moves things by -50%/-50% for the centred pop-up text).
 

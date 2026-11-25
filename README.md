@@ -8,7 +8,7 @@ A fishing party game for learning English. Players take turns filling the gap in
 
 **Play it:** https://www.fugio.co/fish/
 
-**Version: v22** (15 Nov 2026, the CATCH! button pops in place). The version counts only changes to Gummy, not to the rest of fugio.co. See [CHANGELOG.md](CHANGELOG.md).
+**Version: v23** (25 Nov 2026, the phone version plays the English chosen in the Student library). The version counts only changes to Gummy, not to the rest of fugio.co. See [CHANGELOG.md](CHANGELOG.md).
 
 This repository is a snapshot of the live Production files on fugio.co. The live site is still deployed from the fugio-site folder with the Vercel CLI, not from this repository.
 
